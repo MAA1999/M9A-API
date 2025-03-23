@@ -35,7 +35,7 @@ def getContent(resource:str):
             data = data['data']['pageData']
             for item in data:
                 title, content = item['title'], item['content']
-                match = re.search(PATTERNS["en"], title)
+                match = re.search(PATTERNS[resource], title)
                 if match:
                     return True, (resource, match.group(1), match.group(2), content)
     return False, None
