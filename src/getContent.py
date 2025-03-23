@@ -28,7 +28,7 @@ def getContent(resource:str):
                 title, content = item['title'], item['content']
                 match = re.search(PATTERNS["cn"], title)
                 if match:
-                    return True, (match.group(1), match.group(2), content)
+                    return True, (resource, match.group(1), match.group(2), content)
     elif resource in ["en", "jp"]:
         data = json.loads(requests.post(url=OTHER_URL,json={"informationType": 2, "current": 1, "pageSize": 5, "gameId": GAME_IDS[resource]}).text)
         if data['msg'] == "成功":
@@ -37,7 +37,7 @@ def getContent(resource:str):
                 title, content = item['title'], item['content']
                 match = re.search(PATTERNS["en"], title)
                 if match:
-                    return True, (match.group(1), match.group(2), content)
+                    return True, (resource, match.group(1), match.group(2), content)
     return False, None
 
 if __name__ == "__main__":
