@@ -7,7 +7,7 @@
             "combat": {
                 "start_time": "1740621600000",
                 "end_time": "1743973140000",
-                "type": "main"
+                "event_type": "MainStory"
             },
             "re-release": {
                 "start_time": "",
