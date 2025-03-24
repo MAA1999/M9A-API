@@ -1,4 +1,5 @@
 import re
+import json
 from datetime import datetime
 
 import pytz
@@ -35,19 +36,21 @@ def analyzeContent(resource: str, content):
                 if "[Duration]" in text:
                     anecdote_compelete_flag = True
                     anecdote_duration = p.find_next('p').get_text().strip()
+                    activity['anecdote'] = {}
+                    activity['anecdote']['start_time'], activity['anecdote']['end_time'] = convert_to_timestamps(anecdote_duration)
+                    continue
             if "Story Mode" in text:
                 combat_duration = process_combat_duration_en(text)
                 activity['combat']['start_time'], activity['combat']['end_time'] = convert_to_timestamps(combat_duration)
             if "New Anecdote" in html_content:
                 anecdote_find_flag = True
                 continue
-            if "Re-Release" in text:
-                # TODO
+            # re-release
+            if "[Event Stages]" in text:
+                activity['re-release'] = {}
+                re_release_duration = process_combat_duration_en(text)
+                activity['re-release']['start_time'], activity['combat']['end_time'] = convert_to_timestamps(re_release_duration)
                 continue
-
-        if anecdote_compelete_flag:
-            activity['anecdote'] = {}
-            activity['anecdote']['start_time'], activity['anecdote']['end_time'] = convert_to_timestamps(anecdote_duration)
 
     elif resource == "jp":
 
@@ -75,19 +78,23 @@ def analyzeContent(resource: str, content):
                 if "開放期間" in text:
                     anecdote_compelete_flag = True
                     anecdote_duration = process_combat_duration_jp(re.sub(r"【[^】]*】開放期間：", "", text))
+                    activity['anecdote'] = {}
+                    activity['anecdote']['start_time'], activity['anecdote']['end_time'] = convert_to_timestamps(anecdote_duration)
+                    continue
+            # Story Mode
             if "ストーリーモード：" in text:
                 combat_duration = process_combat_duration_jp(text)
                 activity['combat']['start_time'], activity['combat']['end_time'] = convert_to_timestamps(combat_duration)
+                continue
             if "新しいエピソード" in html_content:
                 anecdote_find_flag = True
                 continue
-            if "期間限定で再上映" in text:
-                # TODO
+            # re-release
+            if "【イベントステージ】開放期間：" in text:
+                activity['re-release'] = {}
+                re_release_duration = process_combat_duration_jp(text)
+                activity['re-release']['start_time'], activity['combat']['end_time'] = convert_to_timestamps(re_release_duration)
                 continue
-
-        if anecdote_compelete_flag:
-            activity['anecdote'] = {}
-            activity['anecdote']['start_time'], activity['anecdote']['end_time'] = convert_to_timestamps(anecdote_duration)
 
     return activity
     
@@ -134,7 +141,9 @@ def convert_to_timestamps(time_range_str):
     return start_timestamp_ms, end_timestamp_ms
 
 def process_combat_duration_en(duration: str):
-    duration.replace("Story Mode", "")
+    if "[Event Stages] " in duration:
+        return duration.replace("[Event Stages] ", "")
+
     start_pattern = r'After the version update on (\d{4}-\d{2}-\d{2})'
     match = re.search(start_pattern, duration)
     if match:
@@ -148,6 +157,8 @@ def process_combat_duration_jp(duration: str):
     # 移除前缀，但保留更新后的标记用于正则匹配
     if "ストーリーモード：" in duration:
         duration = duration.replace("ストーリーモード：", "")
+    if "【イベントステージ】開放期間：" in duration:
+        duration = duration.replace("【イベントステージ】開放期間：", "")
     
     # 在输出正则匹配前保存原始字符串
     original_duration = duration
