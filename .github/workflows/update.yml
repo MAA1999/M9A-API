@@ -2,11 +2,11 @@ name: Daily Activity Update
 
 on:
   schedule:
-    # 在UTC时间每天0点运行（cron格式：分 时 日 月 周）
     - cron: '0 0 * * *'
-  
-  # 允许手动触发工作流
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-activities:
@@ -15,15 +15,12 @@ jobs:
     steps:
       - name: Check Out Repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0 # 获取完整历史以便可能的版本比较
-      
+        
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-          cache: 'pip'
-      
+          
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
@@ -31,25 +28,13 @@ jobs:
       
       - name: Run Activity Update Script
         run: |
-          echo "Current Date and Time (UTC): $(date -u '+%Y-%m-%d %H:%M:%S')"
-          echo "Current User's Login: ${{ github.actor || 'github-actions' }}"
           python src/main.py
       
       - name: Commit and Push Changes
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # 检查是否有变更
-          if git status --porcelain | grep -q "\.json$"; then
-            echo "Changes detected in JSON files"
-            git add *.json
-            timestamp=$(date -u "+%Y-%m-%d %H:%M:%S")
-            git commit -m "Auto-update activities data - $timestamp UTC"
-            git push
-          else
-            echo "No changes to commit"
-          fi
-        env:
-          # 使用GitHub令牌以允许push
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git add *.json
+          git commit -m "Auto-update activities data - $(date -u '+%Y-%m-%d %H:%M:%S') UTC" || echo "No changes to commit"
+          git push || echo "Nothing to push"
