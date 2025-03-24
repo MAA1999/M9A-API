@@ -9,7 +9,37 @@ def analyzeContent(resource: str, content):
     activity = {}
 
     if resource == "cn":
-        return
+        # 差SS信息、复刻信息
+        combat_complete_flag = False
+        anecdote_find_flag = False
+        anecdote_compelete_flag = False
+
+        if "全新主线篇章" in content:
+            activity['combat'] = {}
+            activity['combat']['event_type'] = "MainStory"
+        # TODO
+        elif "<SS标志>" in content:
+            activity['combat'] = {}
+            activity['combat']['event_type'] = "SideStory"
+        content = json.loads(content)
+        for line in content:
+            text = re.sub(r'\r|<b>|</b>', '', line['content'])
+            if anecdote_find_flag and not anecdote_compelete_flag:
+                if "【活动时间】" in text:
+                    anecdote_compelete_flag = True
+                    activity['anecdote'] = {}
+                    anecdote_duration = process_combat_duration_cn(text)
+                    activity['anecdote']['start_time'], activity['anecdote']['end_time'] = convert_to_timestamps(anecdote_duration)
+            if not combat_complete_flag and ("【活动时间】" in text):
+                combat_complete_flag = True
+                combat_duration = process_combat_duration_cn(text)
+                activity['combat']['start_time'], activity['combat']['end_time'] = convert_to_timestamps(combat_duration)
+                continue
+            if "「轶事」活动介绍" in text:
+                anecdote_find_flag = True
+                continue
+            # TODO: re-release
+        return activity
     elif resource == "en":
 
         soup = BeautifulSoup(content, "html.parser")
@@ -97,7 +127,6 @@ def analyzeContent(resource: str, content):
                 continue
 
     return activity
-    
 
 def convert_to_timestamps(time_range_str):
     """
@@ -139,6 +168,61 @@ def convert_to_timestamps(time_range_str):
     end_timestamp_ms = int(end_time.timestamp() * 1000)
     
     return start_timestamp_ms, end_timestamp_ms
+
+def process_combat_duration_cn(duration: str):
+
+    # 定义北京时区 (UTC+8)
+    beijing_tz = pytz.timezone('Asia/Shanghai')
+    
+    # 获取北京时区的当前时间
+    now = datetime.now(beijing_tz)
+    current_year = now.year
+    
+    # 定义正则表达式来匹配开始和结束时间
+    start_pattern = r'(\d{1,2})/(\d{1,2})\s*(\d{1,2}):(\d{1,2})'
+    end_pattern = r'-\s*(\d{1,2})/(\d{1,2})\s*(\d{1,2}):(\d{1,2})'
+    
+    start_match = re.search(start_pattern, duration)
+    end_match = re.search(end_pattern, duration)
+    
+    if not start_match or not end_match:
+        print("无法匹配日期格式")
+        return duration
+    
+    # 提取开始时间
+    start_month, start_day, start_hour, start_minute = map(int, start_match.groups())
+    # 提取结束时间
+    end_month, end_day, end_hour, end_minute = map(int, end_match.groups())
+    
+    # 处理可能的跨年情况
+    start_year = current_year
+    end_year = current_year
+    
+    # 如果当前月份已经超过了结束月份，认为结束日期是下一年
+    if now.month > end_month and start_month > end_month:
+        end_year = current_year + 1
+    
+    # 如果开始月份大于结束月份，认为结束日期是下一年
+    if start_month > end_month:
+        end_year = current_year + 1
+    
+    # 创建完整的日期时间对象
+    try:
+        start_datetime = datetime(start_year, start_month, start_day, start_hour, start_minute, tzinfo=beijing_tz)
+        end_datetime = datetime(end_year, end_month, end_day, end_hour, end_minute, tzinfo=beijing_tz)
+        
+        # 如果结束分钟是59，添加59秒以包含整个分钟
+        if end_minute == 59:
+            end_datetime = end_datetime.replace(second=59)
+        
+        # 格式化为目标格式
+        formatted_result = f"{start_datetime.strftime('%Y-%m-%d %H:%M')} - {end_datetime.strftime('%Y-%m-%d %H:%M')} (UTC+8)"
+
+        return formatted_result
+        
+    except ValueError as e:
+        print(f"日期转换错误: {e}")
+        return duration
 
 def process_combat_duration_en(duration: str):
     if "[Event Stages] " in duration:
