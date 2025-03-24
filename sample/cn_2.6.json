@@ -1,0 +1,356 @@
+{
+    "code": 200,
+    "msg": "成功",
+    "data": [
+      {
+        "id": 2535,
+        "gameId": 50001,
+        "order": 810,
+        "noticeTypes": [3],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1740626670000,
+        "endTime": 1744232400000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "更新修复说明",
+            "content": "[{\"width\":1202,\"id\":1,\"link1\":\"\",\"link\":\"\",\"align\":2,\"linkType\":\"\",\"type\":5,\"height\":210,\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/240220\\/227a5354ce15ab04018d7f2a11749ede.png\"},{\"type\":1,\"content\":\" 更新修复说明\\r\",\"id\":2},{\"type\":3,\"content\":\"亲爱的司辰：\\r\",\"id\":3},{\"type\":3,\"content\":\"我们已注意到了目前出现的一些因“暴雨”而产生的紊乱状况，并就相关问题做出了修正与调整。请相信，我们始终在观察与记录着这个世界的不足与缺漏，并将坚持不懈地为之改进。\\r\",\"id\":4},{\"type\":3,\"content\":\"\\r\",\"id\":5},{\"content\":\"【2025\\/3\\/19 更新内容】\\r\\n1. 优化了「第二枚预兆-笃笃骨」、「宇宙写真者-兔毛手袋」在角色界面的展示效果。\\r\\n2. 修复了在「鬃毛邮报」战斗中，特定条件下会出现「图图石子」[象形贝壳]层数异常的问题。\\r\\n3. 修复了在「黄昏的音序」战斗中，特定条件下会出现「梅兰妮」狂想效果异常的问题。\\r\\n4. 修复了「梁月」[强梁既出]可能会出现出牌区显示异常的问题。\\r\\n5. 修复了「与风暴同行-洛佩拉」部分动作会出现L2D显示有误的问题。\\r\\n6. 修复了部分文案有误的问题。\\n\\n\\r【2025\\/3\\/13 更新内容】\\r\\n1. 优化了「纸信圈儿」在特定塑造等级时「“我会飞”」技能的描述，实际效果不变。\\r\\n2. 修复了在「雨中悬想」350M-Ⅰ关卡中，特定条件下会出现附加条件效果异常的问题。\\r\\n3. 修复了在「雨中悬想」部分关卡中，部分敌方受到的[入迷]层数有误的问题。\\r\\n4. 修复了在「雨中悬想」部分关卡中，特定条件下会出现角色激情显示有误的问题。\\r\\n5. 修复了「黄昏的音序」部分事件与造物效果异常的问题。\\r\\n6. 修复了[启示]可能会分配到非普通咒语的异常问题。\\r\\n7. 修复了「轶事」部分追溯中，可缩短时间角色有误的问题。\\r\\n8. 修复了「《荣耀废墟与隐喻指南》」部分剧情中，角色画面显示有误的问题。\\r\\n9. 修复了部分角色L2D显示有误的问题。\\r\\n10. 修复了「星锑-启航！向明日」部分语音英文字幕有误的问题。\\r\\n11. 修复了部分文案有误的问题。\\n\\n【2025\\/2\\/28 更新内容】\\r\\n1. 优化了「红与白-梅兰妮」在角色界面的展示效果。\\r\\n2. 修复了「疯癫与文明」部分剧情音频效果异常的问题。\\r\\n3. 修复了「黄昏的音序：浮沫休止符」部分界面显示异常的问题。\\r\\n4. 修复了「黄昏的音序：浮沫休止符」部分事件或造物效果异常的问题。\\r\\n5. 修复了「黄昏的音序」活动入口名称缺失的问题。\\r\\n6. 修复了「《荣耀废墟与隐喻指南》」活动中，部分界面特效缺失的问题。\\r\\n7. 修复了「与风暴同行-洛佩拉」在特定条件下会出现L2D显示有误的问题。\\r\\n8. 修复了「图鉴-疯癫与文明」纪录片时间显示有误的问题。\\r\\n9. 修复了不休荒原部分角色语音有误的问题。\\r\\n10. 修复了部分文案有误的问题。\\r\\n\\n【2025\\/2\\/27 更新内容】\\r\",\"id\":6,\"type\":3,\"link1\":\"\",\"link\":\"\",\"linkType\":\"\"},{\"content\":\"修复了「弄臣」在进入战斗时，会出现卡住的问题。\",\"id\":7,\"type\":3,\"linkType\":\"\",\"link\":\"\",\"link1\":\"\"}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/250227/227a5354ce15ab04018d7f2a11749ede.png"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 2532,
+        "gameId": 50001,
+        "order": 1310,
+        "noticeTypes": [1],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1742418000000,
+        "endTime": 1744232399000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "「碎裂品」活动征集开启！",
+            "content": "[{\"width\":1240,\"id\":1,\"link1\":\"\",\"useWebView\":0,\"link\":\"321\",\"align\":2,\"linkType\":1,\"type\":4,\"recordUser\":0,\"height\":705,\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250318\\/e068e9c19698987df914daa224beba51.jpg\"}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/250318/e068e9c19698987df914daa224beba51.jpg"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 2533,
+        "gameId": 50001,
+        "order": 1300,
+        "noticeTypes": [1],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1742418000000,
+        "endTime": 1744232399000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "Part2！「柜员机」上新！",
+            "content": "[{\"width\":1240,\"id\":1,\"link1\":\"\",\"useWebView\":0,\"link\":\"10170\",\"align\":2,\"linkType\":1,\"type\":4,\"recordUser\":0,\"height\":705,\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250318\\/48bcad473134b43e05844d214142fcc6.png\"}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/250318/48bcad473134b43e05844d214142fcc6.png"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 2529,
+        "gameId": 50001,
+        "order": 1290,
+        "noticeTypes": [1],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1742245200000,
+        "endTime": 1743454800000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "「离巢日」轮换征集开启！",
+            "content": "[{\"width\":1240,\"id\":1,\"link1\":\"\",\"useWebView\":0,\"link\":\"323\",\"align\":2,\"linkType\":1,\"type\":4,\"recordUser\":0,\"height\":705,\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250317\\/78b7089810b24372e4c8f7b65e273dd5.jpg\"}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/250317/78b7089810b24372e4c8f7b65e273dd5.jpg"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 2524,
+        "gameId": 50001,
+        "order": 2,
+        "noticeTypes": [6],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1685030400000,
+        "endTime": 2003155199000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "官方社群一览",
+            "content": "[{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/230518\\/2596306a019b4aa55acc646b832dd2bd.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":5,\"id\":1,\"height\":210,\"link\":\"\"},{\"type\":1,\"content\":\" 官方社群一览\",\"id\":2},{\"type\":3,\"content\":\"亲爱的司辰：\",\"id\":3},{\"type\":3,\"content\":\"您可以前往以下的官方玩家社区，讨论游戏，交流心得。\",\"id\":4},{\"type\":3,\"content\":\"【官方网站】\",\"id\":5},{\"content\":\"\u003Cu\u003E\u003Clink=\\\"2\\\"\u003E\u003Cb\u003E点击前往《重返未来：1999》的官方网站\u003C\\/b\u003E\u003C\\/link\u003E\u003C\\/u\u003E\",\"linkType\":2,\"type\":3,\"link\":\"https:\\/\\/re.bluepoch.com\\/\",\"id\":6},{\"content\":\"\u003Cu\u003E\u003Clink=\\\"2\\\"\u003E\u003Cb\u003E\u003Ccolor=#C6571EFF\u003E点击加入《重返未来：1999》的官方Q群 \u003C\\/color\u003E\u003C\\/b\u003E\u003C\\/link\u003E\u003C\\/u\u003E\",\"linkType\":2,\"type\":3,\"link\":\"https:\\/\\/re.bluepoch.com\\/qq\\/\",\"id\":8,\"link1\":\"\"},{\"type\":3,\"content\":\"【官方B站账号】重返未来1999\",\"id\":9},{\"type\":3,\"content\":\"【官方微信公众号】重返未来1999\",\"id\":10},{\"type\":3,\"content\":\"【官方微博账号】重返未来1999\",\"id\":11},{\"type\":3,\"content\":\"【官方TapTap账号】重返未来1999\",\"id\":12},{\"type\":3,\"content\":\"【官方抖音账号】重返未来1999\",\"id\":13},{\"type\":3,\"content\":\"【官方小红书账号】重返未来：1999\",\"id\":14},{\"type\":3,\"content\":\"【官方好游快爆账号】重返未来：1999\",\"id\":15}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/230518/2596306a019b4aa55acc646b832dd2bd.jpg"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 2503,
+        "gameId": 50001,
+        "order": 1220,
+        "noticeTypes": [1],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1740619800000,
+        "endTime": 1744232400000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "「荒原构想」上新！",
+            "content": "[{\"width\":1240,\"id\":1,\"link1\":\"\",\"useWebView\":0,\"link\":\"10172\",\"align\":2,\"linkType\":1,\"type\":4,\"recordUser\":0,\"height\":705,\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250225\\/6ae0b1c8f21d5be43b1d379097deaa70.png\"}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/250225/6ae0b1c8f21d5be43b1d379097deaa70.png"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 2504,
+        "gameId": 50001,
+        "order": 1230,
+        "noticeTypes": [1],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1740619800000,
+        "endTime": 1743973200000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "「吼吼点唱机-非线性读法」正式上架！",
+            "content": "[{\"width\":1240,\"link\":\"\",\"align\":2,\"linkType\":1,\"type\":4,\"id\":1,\"height\":705,\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250225\\/860cbe4f3c7712f5545bed3cb358d4aa.png\"}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/250225/860cbe4f3c7712f5545bed3cb358d4aa.png"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 2500,
+        "gameId": 50001,
+        "order": 1240,
+        "noticeTypes": [1],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1740619800000,
+        "endTime": 1744232400000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "「与风暴同行」衣着上新！",
+            "content": "[{\"width\":1240,\"id\":1,\"link1\":\"\",\"useWebView\":1,\"link\":\"https:\\/\\/re.bluepoch.com\\/event\\/skinvideo\\/3102?gameId=50001&accountId=2200&roleId=54701&skinId=310203\",\"align\":2,\"linkType\":2,\"type\":4,\"recordUser\":0,\"height\":705,\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250225\\/3c0320eede5e241b8224792e3ed25b5f.png\"}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/250225/3c0320eede5e241b8224792e3ed25b5f.png"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 2501,
+        "gameId": 50001,
+        "order": 1250,
+        "noticeTypes": [1],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1740619800000,
+        "endTime": 1744232400000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "「第二枚预兆」衣着上新！",
+            "content": "[{\"width\":1240,\"id\":1,\"link1\":\"\",\"useWebView\":1,\"link\":\"https:\\/\\/re.bluepoch.com\\/event\\/skinvideo\\/3104?gameId=50001&accountId=2200&roleId=54701&skinId=310403\",\"align\":2,\"linkType\":2,\"type\":4,\"recordUser\":0,\"height\":705,\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250225\\/e7ebf2c1962ad5d44e79cb98a99232f5.png\"}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/250225/e7ebf2c1962ad5d44e79cb98a99232f5.png"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 2505,
+        "gameId": 50001,
+        "order": 1260,
+        "noticeTypes": [1],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1740619800000,
+        "endTime": 1743022800000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "「湖的涟漪」限时征集开启！",
+            "content": "[{\"width\":1240,\"id\":1,\"link1\":\"\",\"useWebView\":0,\"link\":\"325\",\"align\":2,\"linkType\":1,\"type\":4,\"recordUser\":0,\"height\":705,\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250225\\/1f20f824b88917409cc40ef627d12017.jpg\"}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/250225/1f20f824b88917409cc40ef627d12017.jpg"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 2487,
+        "gameId": 50001,
+        "order": 1200,
+        "noticeTypes": [1],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1740110700000,
+        "endTime": 1744232399000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": " 2.6「疯癫与文明」版本活动一览",
+            "content": "[{\"type\":1,\"content\":\" 2.6「疯癫与文明」版本活动一览\\r\",\"id\":1},{\"type\":3,\"content\":\"《重返未来：1999》2.6版本PV「疯癫与文明」现已发布！可前往各官方社媒账号观看2.6版本最新内容预告。\\r\",\"id\":2},{\"type\":3,\"content\":\"\\r\",\"id\":3},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/1b4cfb76a5cfcb09453baab74bfac669.png\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":4,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「全新主线篇章·第九章·疯癫与文明」\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":5,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事「忧郁的热带」\\r\",\"id\":6},{\"type\":3,\"content\":\"\\r\",\"id\":7},{\"type\":3,\"content\":\"世界的尽头，文明的边缘；一座理性之外的全景监狱，一部无人能懂的魔幻小说。\\r\",\"id\":8},{\"type\":3,\"content\":\"这儿的每名“住民”都心怀理想，这儿的每位“来客”都各有目的。于疯癫的诸相中，但愿真相能得以抽丝剥茧。\\r\",\"id\":9},{\"type\":3,\"content\":\"\\r\",\"id\":10},{\"content\":\"\u003Cb\u003E「疯癫与文明」活动正篇\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":11,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事1ST.16「天堂使徒」\\r\",\"id\":12},{\"type\":3,\"content\":\"【活动时间】2\\/27 10:00 - 4\\/7 4:59\\r\",\"id\":13},{\"type\":3,\"content\":\"【商店兑换时间】2\\/27 10:00 - 4\\/10 4:59\\r\",\"id\":14},{\"type\":3,\"content\":\"【活动说明】活动期间可体验第九章主线「疯癫与文明」的剧情及关卡。司辰在任意主线关卡、洞悉副本、资源副本（不含「映像」的关卡）中消耗细胞活性，可获取「万能指示物」，并有概率获得「苦目软糖」。前往「铁窗文学会」消耗「万能指示物」可兑换活动奖励。\\r\",\"id\":15},{\"type\":3,\"content\":\"※「苦目软糖」：“多彩熊生”牌软糖，零食货架上最先售空的小家伙。可恢复微量细胞活性。有时效性，尽早食用会更加美味！\\r\",\"id\":16},{\"type\":3,\"content\":\"【主要奖励】纯雨滴、「万能指示物」、苦目软糖\\r\",\"id\":17},{\"type\":3,\"content\":\"\\r\",\"id\":18},{\"content\":\"\u003Cb\u003E「事件对照表」说明\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":19,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【活动时间】2\\/27 10:00 - 4\\/7 4:59\\r\",\"id\":20},{\"type\":3,\"content\":\"【活动说明】活动期间，司辰可通过完成「事件对照表」内的任务获取奖励。\\r\",\"id\":21},{\"type\":3,\"content\":\"【主要奖励】「万能指示物」\\r\",\"id\":22},{\"type\":3,\"content\":\"\\r\",\"id\":23},{\"content\":\"\u003Cb\u003E「铁窗文学会」说明\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":24,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【活动时间】2\\/27 10:00 - 4\\/10 4:59\\r\",\"id\":25},{\"type\":3,\"content\":\"【兑换说明】活动期间，司辰可通过消耗「万能指示物」兑换商店内的活动奖励。\\r\",\"id\":26},{\"content\":\"【热门推荐】\u003Ccolor=#C6571EFF\u003E全新6星心相 -「最后的投掷」\u003C\\/color\u003E、饕餮、共鸣晶匣、独一律、部分「极地乌托邦」主题荒原孤屿及建筑、高级洞悉材料、高级共鸣材料、旧旅票、微尘、利齿子儿等\\r\",\"linkType\":\"\",\"type\":3,\"id\":27,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"\\r\",\"id\":28},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/5d403f8aacc17699af29e295da98b404.png\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":29,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「虚构集·《荣耀废墟与隐喻指南》」活动介绍\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":30,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事1ST.16「天堂使徒」\\r\",\"id\":31},{\"type\":3,\"content\":\"【活动时间】2\\/27 10:00 - 3\\/20 4:59\\r\",\"id\":32},{\"type\":3,\"content\":\"【活动说明】象征、隐喻和文学迷宫，她徘徊于此，冒险从未结束。\\r\",\"id\":33},{\"type\":3,\"content\":\"翻开相同书页，获取文学象征。\\r\",\"id\":34},{\"type\":3,\"content\":\"【主要奖励】纯雨滴、养成材料\\r\",\"id\":35},{\"type\":3,\"content\":\"\\r\",\"id\":36},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/a68cdd344801895fb82aadabd945eabe.png\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":37,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「阿莱夫·答录机、蝴蝶、文学评论家」活动介绍\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":38,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事1ST.16「天堂使徒」\\r\",\"id\":39},{\"type\":3,\"content\":\"【活动时间】3\\/20 5:00后\\r\",\"id\":40},{\"type\":3,\"content\":\"【活动说明】独处一室，只有记忆的喃喃细语。\\r\",\"id\":41},{\"type\":3,\"content\":\"投掷骰子发动技能卡牌，战胜敌方并不断丰富战斗方式。\\r\",\"id\":42},{\"type\":3,\"content\":\"【主要奖励】纯雨滴、养成材料\\r\",\"id\":43},{\"type\":3,\"content\":\"\\r\",\"id\":44},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/9f294221d338a9a4cadbc1504257e96d.png\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":45,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「狱中长谈·上篇」活动介绍\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":46,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事1ST.04「芝加哥营救」\\r\",\"id\":47},{\"type\":3,\"content\":\"【活动时间】2\\/27 10:00 - 3\\/20 4:59\\r\",\"id\":48},{\"type\":3,\"content\":\"【活动说明】活动期间，累计签到7日，即可获取累计独一律×7。\\r\",\"id\":49},{\"type\":3,\"content\":\"\\r\",\"id\":50},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/c4c9fa4ae561c6053c06fe66d1d81c1e.png\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":51,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「狱中长谈·下篇」活动介绍\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":52,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事1ST.04「芝加哥营救」\\r\",\"id\":53},{\"type\":3,\"content\":\"【活动时间】3\\/20 5:00 - 4\\/10 4:59\\r\",\"id\":54},{\"type\":3,\"content\":\"【活动说明】活动期间，累计签到7日，还可获取累计独一律×7。\\r\",\"id\":55},{\"type\":3,\"content\":\"\\r\",\"id\":56},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/2972f0dd74c203165d24f25dc7937c0d.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":57,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「醒梦域」周期挑战玩法介绍\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":58,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关浅眠域「韦耶豪瑟森林β」\\r\",\"id\":59},{\"type\":3,\"content\":\"【活动时间】3\\/1 5:00后\\r\",\"id\":60},{\"type\":3,\"content\":\"【玩法说明】\\r\",\"id\":61},{\"type\":3,\"content\":\"1. 全新人工梦游研究的实验性项目，进入醒梦域，迎接不一样的挑战，获取丰富奖励。\\r\",\"id\":62},{\"type\":3,\"content\":\"2. 醒梦域总共4层，每层分为上下半场，同一层上半场选择的角色无法在下半场上阵。关卡内将出现两个常规挑战目标和一个高难度挑战目标，根据玩家完成情况获得相关认证。\\r\",\"id\":63},{\"type\":3,\"content\":\"3. 每层挑战开始前可选择「梦境增益」增强出战队伍的实力，上半场已选择的「梦境增益」将无法在下半场再次选择，进入下一层或者重置挑战后可重新选择。\\r\",\"id\":64},{\"type\":3,\"content\":\"4. 首次在醒梦域中获得一定数量的不同等级认证，可以获得一次性的纯雨滴奖励和养成材料。\\r\",\"id\":65},{\"type\":3,\"content\":\"5. 醒梦域将会在每月1日重置装置，挑战进度与非首通奖励均会重置，同时根据当期获得的A级认证的数量，下期可直接从第3层开始挑战。\\r\",\"id\":66},{\"content\":\"【主要奖励】\\r\\n纯雨滴×700\",\"linkType\":\"\",\"type\":3,\"id\":67,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【深眠域调整】\\r\",\"id\":68},{\"type\":3,\"content\":\"1. 从3月16日第43期深眠域开始，每期持续时间将延长至1个月，后续每月16日5:00刷新下一期深眠域。\\r\",\"id\":69},{\"type\":3,\"content\":\"2. 深眠域挑战层数增加至7层，总共可获得纯雨滴×700。\\r\",\"id\":70},{\"type\":3,\"content\":\"3. 从第43期深眠域开始，满星通关后即可在下一期深眠域中从第5层开始挑战，挑战通关后可直接获得前5层的全部奖励。\\r\",\"id\":71},{\"type\":3,\"content\":\"\\r\",\"id\":72},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/c27056ea24ab77b346ef9181423cdb10.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":73,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「梦游新世代」活动介绍\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":74,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事3RD.02「青蛙与太妃」且通关浅眠域\\r\",\"id\":75},{\"type\":3,\"content\":\"【活动时间】3\\/1 5:00 - 4\\/10 4:59\\r\",\"id\":76},{\"type\":3,\"content\":\"【活动说明】人工梦游技术已迭代，志愿者招募开放中。活动期间，完成指定任务即可领取活动奖励。\\r\",\"id\":77},{\"type\":3,\"content\":\"【主要奖励】洞见之声、苦目糖果、共鸣材料\\r\",\"id\":78},{\"type\":3,\"content\":\"\\r\",\"id\":79},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/d912ebf8a4c72a0dcd4d02196812195b.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":80,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「黄昏的音序·浮沫休止符」全新资料片开启\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":81,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事3RD.15「另一个未来」，开启局外演绎后，通过挂载资料片即可体验\\r\",\"id\":82},{\"type\":3,\"content\":\"【开启时间】2\\/27 10:00后\\r\",\"id\":83},{\"type\":3,\"content\":\"【资料片新增内容】全新故事结局与首领，行进路线更加精简，黄金巷信用获取提升，全新造物与委托事件。\\r\",\"id\":84},{\"type\":3,\"content\":\"【资料片奖励追加】共鸣晶匣×1、饕餮×1、共鸣晶体套组×1（内含悠远的振响×5，片刻的喧嚣×10，一瞬的躁动×20）、偏振套组（内含微频偏振×5，低频偏振×5，高频偏振×5）\\r\",\"id\":85},{\"type\":3,\"content\":\"「局外演绎：黄昏的音序」全部内容至此更新结束。本次奖励为「黄金巷」最终追加奖励，在未获取完毕前将常驻存在。\\r\",\"id\":86},{\"type\":3,\"content\":\"\\r\",\"id\":87},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/59b025709c97110f783ca21904b61458.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":88,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「狂想」角色领悟\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":89,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】6星角色达到洞悉Ⅲ30级 或 5星角色达到洞悉Ⅲ1级，且通关主线故事5TH.20「探寻者」\\r\",\"id\":90},{\"type\":3,\"content\":\"【开启时间】2\\/27 10:00后\\r\",\"id\":91},{\"type\":3,\"content\":\"【本次增幅角色】兔毛手袋，梅兰妮\\r\",\"id\":92},{\"type\":3,\"content\":\"\\r\",\"id\":93},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/9a0b27e0ecd3bc120fea8588aeb2d406.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":94,\"height\":202,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「雨中悬想」探索拓新\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":95,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事5TH.20「探寻者」\\r\",\"id\":96},{\"type\":3,\"content\":\"【「回声屿」挑战更新】\\r\",\"id\":97},{\"type\":3,\"content\":\"回声屿「木魅山鬼」轮替时间：3\\/10 5:00 - 4\\/21 4:59\\r\",\"id\":98},{\"type\":3,\"content\":\"新增挑战关卡：木魅山鬼·原型剖析2\\r\",\"id\":99},{\"type\":3,\"content\":\"回声屿「星体灾兆」轮替时间：3\\/24 5:00 - 5\\/5 4:59\\r\",\"id\":100},{\"type\":3,\"content\":\"新增挑战关卡：星体灾兆·原型剖析2\\r\",\"id\":101},{\"type\":3,\"content\":\"回声屿「原始欢乐」轮替时间：4\\/7 5:00 - 5\\/19 4:59\\r\",\"id\":102},{\"type\":3,\"content\":\"新增挑战关卡：原始欢乐·原型剖析1\\r\",\"id\":103},{\"type\":3,\"content\":\"【「翻覆之舟」挑战更新】\\r\",\"id\":104},{\"type\":3,\"content\":\"翻覆之舟第10期：3\\/10 5:00 - 3\\/24 4:59\\r\",\"id\":105},{\"type\":3,\"content\":\"翻覆之舟第11期：3\\/24 5:00 - 4\\/7 4:59\\r\",\"id\":106},{\"type\":3,\"content\":\"翻覆之舟第12期：4\\/7 5:00 - 4\\/21 4:59\\r\",\"id\":107},{\"type\":3,\"content\":\"【主要奖励】狂想增幅材料\\r\",\"id\":108},{\"type\":3,\"content\":\"\\r\",\"id\":109},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/249c9a267a576b49aa04e7c1722fee87.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":110,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「趋光性研究·尽头之后」活动介绍\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":111,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事3RD.15「另一个未来」\\r\",\"id\":112},{\"type\":3,\"content\":\"【活动时间】\\r\",\"id\":113},{\"type\":3,\"content\":\"「记忆宫，空想宫Ⅰ~Ⅳ」开放时间：3\\/20 5:00 - 4\\/3 4:59\\r\",\"id\":114},{\"type\":3,\"content\":\"「空想宫Ⅴ~Ⅵ」开放时间：3\\/27 5:00 - 4\\/3 4:59\\r\",\"id\":115},{\"type\":3,\"content\":\"「影中谍报」开放时间：3\\/20 5:00 - 4\\/10 4:59\\r\",\"id\":116},{\"type\":3,\"content\":\"【活动说明】于社会这一全景监狱中，飞走的蛾，沿着本能寻找光源。\\r\",\"id\":117},{\"content\":\"【主要奖励】\u003Ccolor=#C6571EFF\u003E埃里克主题衣着「誓言与加值」\u003C\\/color\u003E、主题头像、共鸣晶匣及养成材料\\r\",\"linkType\":\"\",\"type\":3,\"id\":118,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"\\r\",\"id\":119},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/2948d09d15f087868c6d9f2edb96e5eb.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":120,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「轶事」活动介绍\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":121,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事1ST.16「天堂使徒」\\r\",\"id\":122},{\"type\":3,\"content\":\"【活动时间】「贝蒂·最后的电影」开放时间：3\\/6 5:00 - 3\\/20 4:59\\r\",\"id\":123},{\"type\":3,\"content\":\"【活动说明】暗房之中，投入泛黄的照片。弥漫着雾气的池水泛起涟漪，一道道阔别许久的故事借此再度浮出水面。你还记得那些时刻吗？即将上映贝蒂的轶事故事。\\r\",\"id\":124},{\"type\":3,\"content\":\"【主要奖励】5星心相、贪欲\\r\",\"id\":125},{\"type\":3,\"content\":\"\\r\",\"id\":126},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/cf3a6f049e81de0ed09ec9291da4fe35.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":127,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「鬃毛邮报」活动介绍\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":128,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事1ST.16「天堂使徒」\\r\",\"id\":129},{\"type\":3,\"content\":\"【活动时间】3\\/6 5:00 - 4\\/10 4:59\\r\",\"id\":130},{\"type\":3,\"content\":\"【活动说明】为黄金满兜，也为口袋空空。追踪报刊中的神秘生物，换取属于你的荣誉与财富。鬃毛邮报，只为沉勇与见识献予价值。本次调查目标为「洞窟的黄金」、「亘古的怒号」、「战争的阴霾」。\\r\",\"id\":131},{\"type\":3,\"content\":\"【主要奖励】饕餮、共鸣晶匣、贪欲、偏振、共鸣材料、洞悉材料\\r\",\"id\":132},{\"type\":3,\"content\":\"\\r\",\"id\":133},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/00f865fc2412edd7b934b57d9646991d.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":134,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「双重解析」活动介绍\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":135,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事2ND.10 「美味嚼嚼剂」\\r\",\"id\":136},{\"type\":3,\"content\":\"【活动时间】3\\/26 5:00 - 4\\/5 4:59\\r\",\"id\":137},{\"type\":3,\"content\":\"【活动说明】活动期间，挑战成功「意志解析」可获得固定次数的双倍酬劳（每日两次「深度解析」不包含在内）。酬劳加成共计20次，每日最多4次。\\r\",\"id\":138},{\"type\":3,\"content\":\"\\r\",\"id\":139},{\"content\":\"\u003Cb\u003E「实验室快照」活动介绍\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":140,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【开启条件】通关主线故事1ST.16「天堂使徒」\\r\",\"id\":141},{\"type\":3,\"content\":\"【活动时间】4\\/5 5:00 - 4\\/10 4:59\\r\",\"id\":142},{\"type\":3,\"content\":\"【活动说明】银色轰鸣之下，撰于演算纸上的见闻。\\r\",\"id\":143},{\"type\":3,\"content\":\"【主要奖励】纯雨滴×400、苦目糖果、养成材料\\r\",\"id\":144},{\"type\":3,\"content\":\"\\r\",\"id\":145},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/1ac08771620c957459ea0f3b8372a3b4.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":146,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「迷失在虚构的虚构者」活动征集\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":147,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【活动时间】2\\/27 10:00 - 3\\/20 4:59\\r\",\"id\":148},{\"content\":\"【活动说明】活动期间内，6星角色\u003Ccolor=#C6571EFF\u003E「虚构集（岩）」\u003C\\/color\u003E以及5星角色「X（智）」、「挖掘艺术（木）」的受邀概率将大幅提升。\\r\",\"linkType\":\"\",\"type\":3,\"id\":149,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"※活动征集属于「限时角色征集」，与同类型征集的保底机制共享。\\r\",\"id\":150},{\"type\":3,\"content\":\"※首个10次征集内，必得5☆或以上角色。\\r\",\"id\":151},{\"content\":\"※可在游戏内点击征集界面左下角「详情」按钮，查询更多征集信息。\\r\",\"linkType\":\"\",\"type\":3,\"id\":152,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"\\r\",\"id\":153},{\"width\":1202,\"id\":154,\"link1\":\"\",\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250221\\/5184299aa87f81ec5d1d50ff8b0c3bc3.jpg\",\"align\":2,\"linkType\":\"\",\"type\":4,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「碎裂品」活动征集\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":155,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【活动时间】3\\/20 5:00 - 4\\/10 4:59\\r\",\"id\":156},{\"content\":\"【活动说明】活动期间内，6星角色\u003Ccolor=#C6571EFF\u003E「阿莱夫（智）」\u003C\\/color\u003E以及5星角色「五色月（木）」、「帕米埃（兽）」的受邀概率将大幅提升。\\r\",\"linkType\":\"\",\"type\":3,\"id\":157,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"※活动征集属于「限时角色征集」，与同类型征集的保底机制共享。\\r\",\"id\":158},{\"type\":3,\"content\":\"※首个10次征集内，必得5☆或以上角色。\\r\",\"id\":159},{\"content\":\"※可在游戏内点击征集界面左下角「详情」按钮，查询更多征集信息。\\r\",\"linkType\":\"\",\"type\":3,\"id\":160,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"\\r\",\"id\":161},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/18d26bbc8ea090a6eaf212439d337622.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":162,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「湖的涟漪」限时征集\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":163,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【活动时间】2\\/27 10:00 - 3\\/27 4:59\\r\",\"id\":164},{\"type\":3,\"content\":\"【活动说明】\\r\",\"id\":165},{\"type\":3,\"content\":\"※玩家可以在指定的角色范围内自主选择1位六星角色作为概率提升的角色，选择后可随时更换所选角色。\\r\",\"id\":166},{\"content\":\"※在本次征集中首次获取6星角色时，有\u003Ccolor=#C6571EFF\u003E100%的概率为选择的6星角色\u003C\\/color\u003E，仅限一次。后续再次获取6星角色时，有50%的概率为选择的6星角色。如果获取的6星角色非选择的6星角色，则下次征集获取的6星角色必定为选择的6星角色。\\r\",\"linkType\":\"\",\"type\":3,\"id\":167,\"link\":\"\",\"link1\":\"\"},{\"content\":\"※在本次征集活动中，首次十连征集所消耗的独一律数量可\u003Ccolor=#C6571EFF\u003E享受7折优惠\u003C\\/color\u003E。\\r\",\"linkType\":\"\",\"type\":3,\"id\":168,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"※「湖的涟漪」属于「限时活动征集」，与其他类型征集的保底机制不共享。\\r\",\"id\":169},{\"content\":\"※本次活动属于「湖的涟漪」征集，征集保底次数将与同类征集共享。本次征集活动结束后，「湖的涟漪」的\u003Ccolor=#C6571EFF\u003E保底次数将不会清零\u003C\\/color\u003E，会继承至下次「湖的涟漪」征集活动。\\r\",\"linkType\":\"\",\"type\":3,\"id\":170,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"※可在游戏内点击征集界面左下角「详情」按钮，查询更多征集信息。\\r\",\"id\":171},{\"type\":3,\"content\":\"【自选范围】\\r\",\"id\":172},{\"type\":3,\"content\":\"兔毛手袋，梅兰妮，鬃毛沙砾，远旅，温妮弗雷德\\r\",\"id\":173},{\"type\":3,\"content\":\"\\r\",\"id\":174},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/d4b1f71fbb8211ae0d65e79f59da8053.png\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":175,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「吼吼点唱机：非线性读法」新品上架\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":176,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【活动时间】2\\/27 10:00 - 4\\/7 4:59\\r\",\"id\":177},{\"type\":3,\"content\":\"【活动说明】\\r\",\"id\":178},{\"type\":3,\"content\":\"活动期间，司辰可通过完成吼吼点唱机的任务提升分贝等级，获得丰厚奖励。\\r\",\"id\":179},{\"content\":\"解锁「典藏光碟」可获得\u003Ccolor=#C6571EFF\u003E梅兰妮限定衣着 -「红与白」\u003C\\/color\u003E、共鸣晶匣和独一律！\\r\",\"linkType\":\"\",\"type\":3,\"id\":180,\"link\":\"\",\"link1\":\"\"},{\"content\":\"解锁「典藏光碟组」更可获得分贝等级提升10级、限定专属动态头像、悠远的振响×5、纯雨滴及苦目糖罐×3！\\r\",\"linkType\":\"\",\"type\":3,\"id\":181,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【衣着说明】\\r\",\"id\":182},{\"content\":\"分贝等级达到10级并解锁「典藏光碟」，可获得\u003Ccolor=#C6571EFF\u003E梅兰妮限定衣着 -「红与白」\u003C\\/color\u003E。\\r\",\"linkType\":\"\",\"type\":3,\"id\":183,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"获得新衣着后，可在角色-衣着界面查看和穿戴。\\r\",\"id\":184},{\"type\":3,\"content\":\"\\r\",\"id\":185},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/cee770f95eba6d6625b12f6472666854.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":186,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「衣着风尚」 新品上架\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":187,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【活动时间】2\\/27 10:00 - 4\\/10 4:59\\r\",\"id\":188},{\"type\":3,\"content\":\"【活动说明】活动期间，以下角色的新衣着将在银行-衣着风尚中上架并限时售卖。\\r\",\"id\":189},{\"content\":\"\u003Ccolor=#C6571EFF\u003E【非理性迷宫】系列：「第二枚预兆」- 笃笃骨\\r\u003C\\/color\u003E\",\"linkType\":\"\",\"type\":3,\"id\":190,\"link\":\"\",\"link1\":\"\"},{\"content\":\"\u003Ccolor=#C6571EFF\u003E【非理性迷宫】系列：「与风暴同行」- 洛佩拉\\r\u003C\\/color\u003E\",\"linkType\":\"\",\"type\":3,\"id\":191,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"「第二枚预兆」售价：￥68\\/1080粹雨滴\\r\",\"id\":192},{\"type\":3,\"content\":\"「与风暴同行」售价：￥45\\/880粹雨滴\\r\",\"id\":193},{\"type\":3,\"content\":\"\\r\",\"id\":194},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/6cab209822004e3902d9ab6ff443aeac.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":195,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「荒原构想」新品上架\\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":196,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"【活动时间】2\\/27 10:00 - 4\\/10 4:59\\r\",\"id\":197},{\"content\":\"【活动说明】活动期间，\u003Ccolor=#C6571EFF\u003E「极地乌托邦」\u003C\\/color\u003E主题套装（部分）将在银行-荒原构想中上架并限时售卖。\\r\",\"linkType\":\"\",\"type\":3,\"id\":198,\"link\":\"\",\"link1\":\"\"},{\"content\":\"\u003Ccolor=#C6571EFF\u003E「故城新岁」\u003C\\/color\u003E主题套装（部分）将在银行-荒原构想中永久上架。\\r\",\"linkType\":\"\",\"type\":3,\"id\":199,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"\\r\",\"id\":200},{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250220\\/c9fddfe69df622df49406105f5fe5663.jpg\",\"width\":1202,\"align\":2,\"linkType\":1,\"type\":4,\"id\":201,\"height\":210,\"link\":\"\"},{\"content\":\"\u003Cb\u003E「柜员机」新品上架 \\r\u003C\\/b\u003E\",\"linkType\":\"\",\"type\":3,\"id\":202,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"版本更新后，可前往银行-柜员机中选购以下礼包。\\r\",\"id\":203},{\"type\":3,\"content\":\"\\r\",\"id\":204},{\"type\":3,\"content\":\"【文学的纪念】\\r\",\"id\":205},{\"type\":3,\"content\":\"上架时间：2\\/27 10:00 - 4\\/10 4:59\\r\",\"id\":206},{\"type\":3,\"content\":\"该礼包可在上架时间内购买一次。\\r\",\"id\":207},{\"type\":3,\"content\":\"礼包售价：￥328\\r\",\"id\":208},{\"type\":3,\"content\":\"礼包内容：纯雨滴×1500、独一律×20、饕餮×1、共鸣晶匣×1、高阶秘物匣子×20、悠远的振响×5、思潮之钥×3、利齿子儿×100000、微尘×150000\\r\",\"id\":209},{\"type\":3,\"content\":\"\\r\",\"id\":210},{\"type\":3,\"content\":\"【虚构的纪念】\\r\",\"id\":211},{\"type\":3,\"content\":\"上架时间：2\\/27 10:00 - 4\\/10 4:59\\r\",\"id\":212},{\"type\":3,\"content\":\"该礼包可在上架时间内购买一次。\\r\",\"id\":213},{\"type\":3,\"content\":\"礼包售价：￥198\\r\",\"id\":214},{\"type\":3,\"content\":\"礼包内容：纯雨滴×1200、独一律×12、共鸣晶匣×1、低频偏振×15、片刻的喧嚣×10、浮想之芽×20\\r\",\"id\":215},{\"type\":3,\"content\":\"\\r\",\"id\":216},{\"type\":3,\"content\":\"【诗社的赠礼】\\r\",\"id\":217},{\"type\":3,\"content\":\"上架时间：2\\/27 10:00 - 4\\/10 4:59\\r\",\"id\":218},{\"type\":3,\"content\":\"该礼包将分为上下两期投放，每期限购一次。\\r\",\"id\":219},{\"type\":3,\"content\":\"礼包售价：￥28\\r\",\"id\":220},{\"type\":3,\"content\":\"礼包内容：独一律×4、一瞬的躁动×5、苦目糖果×1、利齿子儿×30000\\r\",\"id\":221},{\"type\":3,\"content\":\"\\r\",\"id\":222},{\"type\":3,\"content\":\"【狱友的赠礼】\\r\",\"id\":223},{\"type\":3,\"content\":\"上架时间：2\\/27 10:00 - 4\\/10 4:59\\r\",\"id\":224},{\"type\":3,\"content\":\"该礼包将分为上下两期投放，每期限购一次。\\r\",\"id\":225},{\"type\":3,\"content\":\"礼包售价：￥12\\r\",\"id\":226},{\"type\":3,\"content\":\"礼包内容：独一律×2、苦目糖果×1\\r\",\"id\":227},{\"type\":3,\"content\":\"\\r\",\"id\":228},{\"type\":3,\"content\":\"【成像研究】\\r\",\"id\":229},{\"type\":3,\"content\":\"上架时间：2\\/27 10:00 - 4\\/10 4:59\\r\",\"id\":230},{\"type\":3,\"content\":\"该礼包将分为上下两期投放，每期限购一次。\\r\",\"id\":231},{\"type\":3,\"content\":\"礼包售价：￥98\\r\",\"id\":232},{\"type\":3,\"content\":\"礼包内容：粹雨滴×980、独一律×4、规序影像×30\\r\",\"id\":233},{\"type\":3,\"content\":\"\\r\",\"id\":234},{\"type\":3,\"content\":\"【素材自助畅饮】\\r\",\"id\":235},{\"type\":3,\"content\":\"上架时间：2\\/27 10:00 - 4\\/10 4:59\\r\",\"id\":236},{\"type\":3,\"content\":\"该礼包可在上架时间内购买一次。\\r\",\"id\":237},{\"type\":3,\"content\":\"礼包售价：￥30\\r\",\"id\":238},{\"type\":3,\"content\":\"礼包内容：共三个区域，每个区域内有若干种类的材料选项，可在每个区域内自行挑选一个进行组合，组合后即可购买。\\r\",\"id\":239},{\"type\":3,\"content\":\"区域内含高阶秘物匣子、狂想增幅材料、片刻的喧嚣、微频偏振、微尘、利齿子儿等材料供司辰按需自由搭配。\\r\",\"id\":240},{\"type\":3,\"content\":\"\\r\",\"id\":241},{\"type\":3,\"content\":\"【素材丰收派对】\\r\",\"id\":242},{\"type\":3,\"content\":\"上架时间：2\\/27 10:00 - 4\\/10 4:59\\r\",\"id\":243},{\"type\":3,\"content\":\"该礼包可在上架时间内购买一次。\\r\",\"id\":244},{\"type\":3,\"content\":\"礼包售价：￥68\\r\",\"id\":245},{\"type\":3,\"content\":\"礼包内容：共三个区域，每个区域内有若干种类的材料选项，可在每个区域内自行挑选一个进行组合，组合后即可购买。\\r\",\"id\":246},{\"type\":3,\"content\":\"区域内含饕餮、共鸣晶匣、狂想增幅材料、特阶秘物匣子、悠远的振响、高频偏振等材料供司辰按需自由搭配。\\r\",\"id\":247},{\"type\":3,\"content\":\"\\r\",\"id\":248},{\"content\":\"【十全调·湖的涟漪】\\r\",\"linkType\":\"\",\"type\":3,\"id\":249,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"上架时间：2\\/27 10:00 - 3\\/27 4:59\\r\",\"id\":250},{\"type\":3,\"content\":\"该礼包可在上架时间内购买两次。\\r\",\"id\":251},{\"type\":3,\"content\":\"礼包售价：￥78\\r\",\"id\":252},{\"content\":\"礼包内容：十全调·湖的涟漪（该道具仅限用于【湖的涟漪】限时征集，使用该道具时，若【湖的涟漪】首次征集折扣存在，将不会触发【湖的涟漪】首次征集折扣，该道具使用后，【湖的涟漪】首次征集折扣仍保留。【湖的涟漪】限时征集结束后，该道具过期。）\\r\",\"linkType\":\"\",\"type\":3,\"id\":253,\"link\":\"\",\"link1\":\"\"},{\"type\":3,\"content\":\"\\r\",\"id\":254}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/250220/d4b1f71fbb8211ae0d65e79f59da8053.png",
+              "https://notice-res.sl916.com/img/250220/a68cdd344801895fb82aadabd945eabe.png",
+              "https://notice-res.sl916.com/img/250220/9f294221d338a9a4cadbc1504257e96d.png",
+              "https://notice-res.sl916.com/img/250220/c4c9fa4ae561c6053c06fe66d1d81c1e.png",
+              "https://notice-res.sl916.com/img/250220/5d403f8aacc17699af29e295da98b404.png",
+              "https://notice-res.sl916.com/img/250220/1b4cfb76a5cfcb09453baab74bfac669.png",
+              "https://notice-res.sl916.com/img/250220/9a0b27e0ecd3bc120fea8588aeb2d406.jpg",
+              "https://notice-res.sl916.com/img/250220/8df61a411d0603cc2d70a5a03bbd9593.jpg",
+              "https://notice-res.sl916.com/img/250220/18d26bbc8ea090a6eaf212439d337622.jpg",
+              "https://notice-res.sl916.com/img/250220/d912ebf8a4c72a0dcd4d02196812195b.jpg",
+              "https://notice-res.sl916.com/img/250220/59b025709c97110f783ca21904b61458.jpg",
+              "https://notice-res.sl916.com/img/250220/c9fddfe69df622df49406105f5fe5663.jpg",
+              "https://notice-res.sl916.com/img/250220/c27056ea24ab77b346ef9181423cdb10.jpg",
+              "https://notice-res.sl916.com/img/250220/00f865fc2412edd7b934b57d9646991d.jpg",
+              "https://notice-res.sl916.com/img/250220/249c9a267a576b49aa04e7c1722fee87.jpg",
+              "https://notice-res.sl916.com/img/250220/6cab209822004e3902d9ab6ff443aeac.jpg",
+              "https://notice-res.sl916.com/img/250220/2972f0dd74c203165d24f25dc7937c0d.jpg",
+              "https://notice-res.sl916.com/img/250220/1ac08771620c957459ea0f3b8372a3b4.jpg",
+              "https://notice-res.sl916.com/img/250220/cee770f95eba6d6625b12f6472666854.jpg",
+              "https://notice-res.sl916.com/img/250220/2948d09d15f087868c6d9f2edb96e5eb.jpg",
+              "https://notice-res.sl916.com/img/250220/cf3a6f049e81de0ed09ec9291da4fe35.jpg"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 2463,
+        "gameId": 50001,
+        "order": 700,
+        "noticeTypes": [6],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1737684000000,
+        "endTime": 2055167999000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "UTTU*烁光专栏*典藏卡上架旗舰店",
+            "content": "[{\"width\":1240,\"id\":1,\"link1\":\"\",\"useWebView\":0,\"link\":\"https:\\/\\/detail.tmall.com\\/item.htm?id=879713604606&spm=a211lz.success.0.0.39e02b90G7RFf4&sku_properties=134942334%3A152069077\",\"align\":2,\"linkType\":2,\"type\":4,\"recordUser\":0,\"height\":705,\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/250122\\/d8bdba28941092c10b2a7e17e240a382.jpg\"}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/250122/d8bdba28941092c10b2a7e17e240a382.jpg"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 1392,
+        "gameId": 50001,
+        "order": 2,
+        "noticeTypes": [3],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1685030400000,
+        "endTime": 2003759999000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "公平运营声明",
+            "content": "[{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/230518\\/5ada1b6e98280c6a9ec163c0c35bd85a.jpg\",\"link\":\"\",\"align\":2,\"linkType\":1,\"type\":5,\"id\":1,\"height\":210,\"width\":1202},{\"type\":1,\"content\":\" 《重返未来：1999》公平运营声明\",\"id\":2},{\"type\":3,\"content\":\"为了保证《重返未来：1999》游戏环境的健康公平，保证玩家的利益，在此提醒各位玩家：\",\"id\":3},{\"type\":3,\"content\":\"1）禁止使用外挂、加速器或其他破坏游戏公平性的任何第三方工具。\",\"id\":4},{\"type\":3,\"content\":\"一经发现，深蓝互动将视违规严重程度及违规次数，采取包括但不仅限于扣除违规收益、冻结游戏账号、永久封禁游戏账号等措施。\",\"id\":5},{\"type\":3,\"content\":\"2）禁止进行任何形式的账号转让行为。\",\"id\":6},{\"type\":3,\"content\":\"请保护好个人财产与个人信息，切勿相信任何账号共享\\/交易信息，切勿在其他平台购买账号。此外，切勿共享\\/出售自己的游戏账号，谨防诈骗。\",\"id\":7},{\"type\":3,\"content\":\"根据深蓝互动《许可服务协议》及《隐私政策》，任何因玩家自身原因导致的个人信息泄露、造成损失等问题，官方将不予处理。\",\"id\":8},{\"type\":3,\"content\":\"3）禁止通过非官方途径充值，第三方代充的行为。\",\"id\":9},{\"type\":3,\"content\":\"若玩家因以上情况所造成的损失，官方将不予处理。\",\"id\":10},{\"type\":3,\"content\":\"\\n\",\"id\":11},{\"type\":3,\"content\":\"《重返未来：1999》始终坚持保证公平的游戏秩序，保障玩家游戏资产安全。在不断完善游戏品质的同时，我们也衷心希望各位玩家与我们一起，共同营造和维护一个公平和谐的游戏环境。\",\"id\":12}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/230518/5ada1b6e98280c6a9ec163c0c35bd85a.jpg"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 1191,
+        "gameId": 50001,
+        "order": 3,
+        "noticeTypes": [3],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1685030400000,
+        "endTime": 2003759999000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "未成年人防沉迷公告",
+            "content": "[{\"width\":1202,\"link\":\"\",\"align\":2,\"linkType\":1,\"type\":5,\"id\":1,\"height\":210,\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/230518\\/0031e8a3c1379247b322d42f20371216.jpg\"},{\"type\":1,\"content\":\" 未成年人防沉迷公告\",\"id\":2},{\"type\":3,\"content\":\"为了积极响应国家新闻出版署下发的《关于进一步严格管理 切实防止未成年人沉迷网络游戏的通知》，为保护未成年人身心健康贡献一份力量。\",\"id\":3},{\"type\":3,\"content\":\"\\n\",\"id\":4},{\"type\":3,\"content\":\"一、在线时长限制\",\"id\":5},{\"type\":3,\"content\":\"1. 仅在周五、周六、周日和法定节假日每日20时至21时，向未成年人提供1小时游戏服务。其余时间未成年人将无法登录游戏。\",\"id\":6},{\"type\":3,\"content\":\"2. 不向未实名注册和登录的用户提供任何形式的游戏服务。\",\"id\":7},{\"type\":3,\"content\":\"\\n\",\"id\":8},{\"type\":3,\"content\":\"二、付费服务限制\",\"id\":9},{\"type\":3,\"content\":\"为规范未成年人付费服务，对未成年人用户付费服务实行以下限制：\",\"id\":10},{\"type\":3,\"content\":\"1. 未满8周岁的用户不能充值。\",\"id\":11},{\"type\":3,\"content\":\"2. 8周岁以上未满16周岁的用户，单次充值金额不得超过50元人民币，每月充值金额累计不得超过200元人民币。\",\"id\":12},{\"type\":3,\"content\":\"3. 16周岁以上未满18周岁的用户，单次充值金额不得超过100元人民币，每月充值金额累计不得超过400元人民币。\",\"id\":13}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/230518/0031e8a3c1379247b322d42f20371216.jpg"
+            ]
+          }
+        },
+        "status": 1
+      },
+      {
+        "id": 687,
+        "gameId": 50001,
+        "order": 11,
+        "noticeTypes": [3],
+        "noticePositionTypes": [4],
+        "noticeLabelType": 3,
+        "beginTime": 1687687200000,
+        "endTime": 2005919999000,
+        "noticeLabelTypeName": "活动",
+        "isTop": 0,
+        "contentMap": {
+          "zh-CN": {
+            "title": "关于打击第三方代充行为公告",
+            "content": "[{\"content\":\"https:\\/\\/notice-res.sl916.com\\/img\\/230625\\/1d7ec44fc346cf3cb526164b5d599b06.png\",\"align\":2,\"linkType\":1,\"type\":5,\"width\":1202,\"height\":210,\"link\":\"\"},{\"type\":1,\"content\":\" 关于打击第三方代充行为公告\\r\"},{\"type\":3,\"content\":\"亲爱的司辰：\\r\"},{\"type\":3,\"content\":\"为了维护《重返未来：1999》的公平秩序，共建和谐游戏环境，保障各位司辰的利益与账号信息安全，在此提醒各位司辰，第三方充值平台没有任何安全保障，有可能会对财产与游戏账号造成损失。为了各位司辰的账号财产安全，建议使用官方渠道进行充值，以免造成不必要的损失。\\r\\n\\n\"},{\"type\":3,\"content\":\"\u003Cb\u003E同时深蓝互动也将予以严厉打击和处罚，处罚包括但不限于以下几项：\\r\u003C\\/b\u003E\"},{\"type\":3,\"content\":\"1. 扣除涉嫌违法代充所获得的游戏道具；\\r\"},{\"type\":3,\"content\":\"2. 对账号进行暂时或永久性封禁；\\r\"},{\"type\":3,\"content\":\"3. 因非法充值导致充值未到账的问题，官方将不予补偿。\\r\"},{\"type\":3,\"content\":\"\\r\"},{\"type\":3,\"content\":\"\u003Cb\u003E第三方充值平台的说明：\\r\u003C\\/b\u003E\"},{\"type\":3,\"content\":\"1. 第三方代充一般是指将自己的账号密码交给他人代替进行充值的行为。其中常见的第三方代充行为包含：第三方平台购买、第三方私下交易、提供账号密码给第三方设备登录进行充值等行为。\\r\"},{\"type\":3,\"content\":\"2. 第三方代充会带来的损失：部分不法商贩利用大量黑卡、信用卡盗刷、非法礼品卡等方式进行代充行为，可能会对用户造成个人信息泄漏、信用卡盗刷、充值未到账等损失；\\r\"},{\"type\":3,\"content\":\"甚至有不法商贩利用“超低价、折扣”等吸引用户购买，从而获取用户账号信息，修改账号密码，严重危害用户账号安全。\\r\"},{\"type\":3,\"content\":\"\\r\"},{\"type\":3,\"content\":\"因此我们呼吁各位司辰不要使用第三方代充，请选择官方安全渠道进行充值。\\n\\n\"}]",
+            "imageUrl": [
+              "https://notice-res.sl916.com/img/230625/1d7ec44fc346cf3cb526164b5d599b06.png"
+            ]
+          }
+        },
+        "status": 1
+      }
+    ]
+  }
