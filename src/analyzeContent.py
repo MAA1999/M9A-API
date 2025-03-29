@@ -19,7 +19,7 @@ def analyzeContent(resource: str, content):
             activity["combat"] = {}
             activity["combat"]["event_type"] = "MainStory"
         # TODO
-        elif "<SS标志>" in content:
+        elif "【故事模式】" in content:
             activity["combat"] = {}
             activity["combat"]["event_type"] = "SideStory"
         content = json.loads(content)
@@ -34,7 +34,9 @@ def analyzeContent(resource: str, content):
                         activity["anecdote"]["start_time"],
                         activity["anecdote"]["end_time"],
                     ) = convert_to_timestamps(anecdote_duration)
-            if not combat_complete_flag and ("【活动时间】" in text):
+            if not combat_complete_flag and (
+                "【故事模式】" in text or "【活动时间】" in text
+            ):
                 combat_complete_flag = True
                 combat_duration = process_combat_duration_cn(text)
                 activity["combat"]["start_time"], activity["combat"]["end_time"] = (
