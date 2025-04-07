@@ -1,21 +1,23 @@
 {
-    "2.6": {
-        "version_name": "疯癫与文明",
-        "start_time": "1740621600000",
-        "end_time": "1744232340000",
+    "2.7": {
+        "version_name": "1987宇宙组曲",
+        "start_time": 1744250400000,
+        "end_time": 1747256399000,
         "activity": {
             "combat": {
-                "start_time": "1740621600000",
-                "end_time": "1743973140000",
-                "event_type": "MainStory"
-            },
-            "re-release": {
-                "start_time": "",
-                "end_time": ""
+                "event_type": "SideStory",
+                "start_time": 1744250400000,
+                "end_time": 1746997199000
             },
             "anecdote": {
-                "start_time": "1741208400000",
-                "end_time": "1742417940000"
+                "start_time": 1744664400000,
+                "end_time": 1745873999000
+            },
+            "re-release": {
+                "name": "飞驰！明日之城",
+                "alias": "飞驰",
+                "start_time": 1746046800000,
+                "end_time": 1746910799000
             }
         }
     }
