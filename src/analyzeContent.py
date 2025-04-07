@@ -10,15 +10,15 @@ def analyzeContent(resource: str, content):
     activity = {}
 
     if resource == "cn":
-        # 差SS信息、复刻信息
         combat_complete_flag = False
         anecdote_find_flag = False
         anecdote_compelete_flag = False
+        re_release_find_flag = False
+        re_release_compelete_flag = False
 
         if "全新主线篇章" in content:
             activity["combat"] = {}
             activity["combat"]["event_type"] = "MainStory"
-        # TODO
         elif "【故事模式】" in content:
             activity["combat"] = {}
             activity["combat"]["event_type"] = "SideStory"
@@ -34,6 +34,17 @@ def analyzeContent(resource: str, content):
                         activity["anecdote"]["start_time"],
                         activity["anecdote"]["end_time"],
                     ) = convert_to_timestamps(anecdote_duration)
+                    continue
+            if re_release_find_flag and not re_release_compelete_flag:
+                if "活动关卡开放时间" in text:
+                    re_release_compelete_flag = True
+                    activity["re-release"] = {}
+                    re_release_duration = process_combat_duration_cn(text)
+                    (
+                        activity["re-release"]["start_time"],
+                        activity["re-release"]["end_time"],
+                    ) = convert_to_timestamps(re_release_duration)
+                    continue
             if not combat_complete_flag and (
                 "【故事模式】" in text or "【活动时间】" in text
             ):
@@ -46,7 +57,9 @@ def analyzeContent(resource: str, content):
             if "「轶事」活动介绍" in text:
                 anecdote_find_flag = True
                 continue
-            # TODO: re-release
+            if "限时重映" in text:
+                re_release_find_flag = True
+                continue
         return activity
     elif resource == "en":
 
