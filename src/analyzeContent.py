@@ -86,7 +86,10 @@ def analyzeContent(resource: str, content):
             if anecdote_find_flag and not anecdote_compelete_flag:
                 if "[Duration]" in text:
                     anecdote_compelete_flag = True
-                    anecdote_duration = p.find_next("p").get_text().strip()
+                    p1 = p
+                    while "UTC" not in p1.find_next("p").get_text().strip():
+                        p1 = p1.find_next("p")
+                    anecdote_duration = p1.find_next("p").get_text().strip()
                     activity["anecdote"] = {}
                     (
                         activity["anecdote"]["start_time"],
@@ -94,6 +97,8 @@ def analyzeContent(resource: str, content):
                     ) = convert_to_timestamps(anecdote_duration)
                     continue
             if "Story Mode" in text:
+                if "UTC" not in text:
+                    text = p.find_next("p").get_text().strip()
                 combat_duration = process_combat_duration_en(text)
                 activity["combat"]["start_time"], activity["combat"]["end_time"] = (
                     convert_to_timestamps(combat_duration)
@@ -104,10 +109,13 @@ def analyzeContent(resource: str, content):
             # re-release
             if "[Event Stages]" in text:
                 activity["re-release"] = {}
+                if "UTC" not in text:
+                    text = p.find_next("p").get_text().strip()
                 re_release_duration = process_combat_duration_en(text)
-                activity["re-release"]["start_time"], activity["combat"]["end_time"] = (
-                    convert_to_timestamps(re_release_duration)
-                )
+                (
+                    activity["re-release"]["start_time"],
+                    activity["re-release"]["end_time"],
+                ) = convert_to_timestamps(re_release_duration)
                 continue
 
     elif resource == "jp":
@@ -155,12 +163,13 @@ def analyzeContent(resource: str, content):
                 anecdote_find_flag = True
                 continue
             # re-release
-            if "【イベントステージ】開放期間：" in text:
+            if "【イベントステージ】開放期間：" in text or "ステージ開放期間" in text:
                 activity["re-release"] = {}
                 re_release_duration = process_combat_duration_jp(text)
-                activity["re-release"]["start_time"], activity["combat"]["end_time"] = (
-                    convert_to_timestamps(re_release_duration)
-                )
+                (
+                    activity["re-release"]["start_time"],
+                    activity["re-release"]["end_time"],
+                ) = convert_to_timestamps(re_release_duration)
                 continue
 
     return activity
@@ -171,7 +180,7 @@ def convert_to_timestamps(time_range_str):
     将时间范围字符串转换为毫秒时间戳，正确处理夏令时
     """
     # 提取时间和时区
-    pattern = r"(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})\s*-\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})\s*\(UTC([+-]\d+)\)"
+    pattern = r"(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})\s*-\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})\s*(?:\d{2}:\d{2})?\s*\(UTC([+-]?\d+)\)"
     match = re.search(pattern, time_range_str)
 
     if not match:
