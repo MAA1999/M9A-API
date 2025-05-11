@@ -26,7 +26,7 @@ def analyzeContent(resource: str, content):
         for line in content:
             text = re.sub(r"\r|<b>|</b>", "", line["content"])
             if anecdote_find_flag and not anecdote_compelete_flag:
-                if "【活动时间】" in text:
+                if "开放时间" in text:
                     anecdote_compelete_flag = True
                     activity["anecdote"] = {}
                     anecdote_duration = process_combat_duration_cn(text)

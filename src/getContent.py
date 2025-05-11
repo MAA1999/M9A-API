@@ -32,7 +32,10 @@ def getContent(resource: str):
             data = data["data"]
             for item in data:
                 item = item["contentMap"]["zh-CN"]
-                title, content = item["title"], item["content"]
+                title = re.sub(
+                    r"\r|<b>|</b>", "", json.loads(item["content"])[0]["content"]
+                )
+                content = item["content"]
                 match = re.search(PATTERNS["cn"], title)
                 if match:
                     return True, (resource, match.group(1), match.group(2), content)
