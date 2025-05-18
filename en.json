@@ -50,5 +50,25 @@
                 "end_time": 1748249999000
             }
         }
+    },
+    "2.6": {
+        "version_name": "Folie et Déraison",
+        "start_time": 1748527200000,
+        "end_time": 1751533199000,
+        "activity": {
+            "combat": {
+                "event_type": "MainStory",
+                "start_time": 1748527200000,
+                "end_time": 1751273999000
+            },
+            "anecdote": {
+                "start_time": 1748941200000,
+                "end_time": 1751533199000
+            },
+            "re-release": {
+                "start_time": 1750410000000,
+                "end_time": 1751273999000
+            }
+        }
     }
 }
