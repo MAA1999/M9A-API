@@ -134,6 +134,7 @@ def analyzeContent(resource: str, content):
         soup = BeautifulSoup(content, "html.parser")
         p_tags = soup.find_all("p")
 
+        main_compelete_flag = False
         anecdote_find_flag = False
         anecdote_compelete_flag = False
 
@@ -151,6 +152,16 @@ def analyzeContent(resource: str, content):
         for i, p in enumerate(p_tags):
             html_content = str(p)
             text = p.get_text().strip()
+            if (
+                not main_compelete_flag
+                and activity["combat"]["event_type"] == "MainStory"
+            ):
+                if "イベント期間" in text:
+                    main_compelete_flag = True
+                    combat_duration = process_combat_duration_jp(text)
+                    activity["combat"]["start_time"], activity["combat"]["end_time"] = (
+                        convert_to_timestamps(combat_duration)
+                    )
             if anecdote_find_flag and not anecdote_compelete_flag:
                 if "開放期間" in text:
                     anecdote_compelete_flag = True
@@ -170,7 +181,10 @@ def analyzeContent(resource: str, content):
                     convert_to_timestamps(combat_duration)
                 )
                 continue
-            if "新しいエピソード" in html_content:
+            if (
+                "新しいエピソード" in html_content
+                or "新しい「エピソード」" in html_content
+            ):
                 anecdote_find_flag = True
                 continue
             # re-release
@@ -319,7 +333,7 @@ def process_combat_duration_jp(duration: str):
     jst = pytz.timezone("Asia/Tokyo")
 
     # 先检查是否有"更新后"类型的表述，并提取日期
-    update_pattern = r"(\d{4})年(\d{1,2})月(\d{1,2})日（[月火水木金土日]）(アップデート後|更新後|メンテナンス後)"
+    update_pattern = r"(\d{4})年(\d{1,2})月(\d{1,2})日（[月火水木金土日]）\s*(アップデート後|更新後|メンテナンス後)"
     update_match = re.search(update_pattern, original_duration)
 
     if update_match:
@@ -333,7 +347,7 @@ def process_combat_duration_jp(duration: str):
     # 处理标准格式的时间范围
     start_pattern = r"(\d{4})年(\d{1,2})月(\d{1,2})日(?:（[月火水木金土日]）)?\s*(\d{1,2}):(\d{1,2})"
     end_pattern = (
-        r"～(\d{1,2})月(\d{1,2})日(?:（[月火水木金土日]）)?\s*(\d{1,2}):(\d{1,2})"
+        r"～\s*(\d{1,2})月(\d{1,2})日(?:（[月火水木金土日]）)?\s*(\d{1,2}):(\d{1,2})"
     )
 
     start_match = re.search(start_pattern, duration)
