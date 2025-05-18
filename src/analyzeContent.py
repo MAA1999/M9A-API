@@ -66,12 +66,13 @@ def analyzeContent(resource: str, content):
         soup = BeautifulSoup(content, "html.parser")
         p_tags = soup.find_all("p")
 
+        main_compelete_flag = False
         anecdote_find_flag = False
         anecdote_compelete_flag = False
 
         for i, p in enumerate(p_tags):
             html_content = str(p)
-            if "New Main Story Chapter" in html_content:
+            if "New Main Story" in html_content:
                 activity["combat"] = {}
                 activity["combat"]["event_type"] = "MainStory"
                 break
@@ -83,6 +84,16 @@ def analyzeContent(resource: str, content):
         for i, p in enumerate(p_tags):
             html_content = str(p)
             text = p.get_text().strip()
+            if (
+                not main_compelete_flag
+                and activity["combat"]["event_type"] == "MainStory"
+            ):
+                if "After the version update on" in text:
+                    main_compelete_flag = True
+                    combat_duration = process_combat_duration_en(text)
+                    activity["combat"]["start_time"], activity["combat"]["end_time"] = (
+                        convert_to_timestamps(combat_duration)
+                    )
             if anecdote_find_flag and not anecdote_compelete_flag:
                 if "[Duration]" in text:
                     anecdote_compelete_flag = True
@@ -283,8 +294,6 @@ def process_combat_duration_cn(duration: str):
 
 
 def process_combat_duration_en(duration: str):
-    if "[Event Stages] " in duration:
-        return duration.replace("[Event Stages] ", "")
 
     start_pattern = r"After the version update on (\d{4}-\d{2}-\d{2})"
     match = re.search(start_pattern, duration)
