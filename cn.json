@@ -52,5 +52,25 @@
                 "end_time": 1748897999000
             }
         }
+    },
+    "3.0": {
+        "version_name": "行于漫漫长路上",
+        "start_time": 1750903200000,
+        "end_time": 1754513999000,
+        "activity": {
+            "combat": {
+                "event_type": "MainStory",
+                "start_time": 1750903200000,
+                "end_time": 1754254799000
+            },
+            "anecdote": {
+                "start_time": 1751490000000,
+                "end_time": 1752699599000
+            },
+            "re-release": {
+                "start_time": 1753390800000,
+                "end_time": 1754254799000
+            }
+        }
     }
 }
