@@ -72,5 +72,25 @@
                 "end_time": 1751273999000
             }
         }
+    },
+    "2.7": {
+        "version_name": "1987 Cosmic Overture",
+        "start_time": 1751551200000,
+        "end_time": 1754557199000,
+        "activity": {
+            "combat": {
+                "event_type": "SideStory",
+                "start_time": 1751551200000,
+                "end_time": 1754297999000
+            },
+            "anecdote": {
+                "start_time": 1751965200000,
+                "end_time": 1753174799000
+            },
+            "re-release": {
+                "start_time": 1753434000000,
+                "end_time": 1754297999000
+            }
+        }
     }
 }
