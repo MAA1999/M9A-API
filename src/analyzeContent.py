@@ -175,7 +175,7 @@ def analyzeContent(resource: str, content):
                     ) = convert_to_timestamps(anecdote_duration)
                     continue
             # Story Mode
-            if "ストーリーモード：" in text:
+            if "ストーリーモード" in text:
                 combat_duration = process_combat_duration_jp(text)
                 activity["combat"]["start_time"], activity["combat"]["end_time"] = (
                     convert_to_timestamps(combat_duration)
@@ -323,8 +323,8 @@ def process_combat_duration_jp(duration: str):
     # 移除前缀，但保留更新后的标记用于正则匹配
     if "ストーリーモード：" in duration:
         duration = duration.replace("ストーリーモード：", "")
-    if "【イベントステージ】開放期間：" in duration:
-        duration = duration.replace("【イベントステージ】開放期間：", "")
+    if "開放期間：" in duration:
+        duration = duration.split("開放期間：")[-1]
 
     # 在输出正则匹配前保存原始字符串
     original_duration = duration
@@ -346,9 +346,7 @@ def process_combat_duration_jp(duration: str):
 
     # 处理标准格式的时间范围
     start_pattern = r"(\d{4})年(\d{1,2})月(\d{1,2})日(?:（[月火水木金土日]）)?\s*(\d{1,2}):(\d{1,2})"
-    end_pattern = (
-        r"～\s*(\d{1,2})月(\d{1,2})日(?:（[月火水木金土日]）)?\s*(\d{1,2}):(\d{1,2})"
-    )
+    end_pattern = r"[～〜]\s*(\d{1,2})月(\d{1,2})日(?:（[月火水木金土日]）)?\s*(\d{1,2}):(\d{1,2})"
 
     start_match = re.search(start_pattern, duration)
     end_match = re.search(end_pattern, duration)
