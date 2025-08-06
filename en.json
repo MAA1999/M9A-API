@@ -94,5 +94,17 @@
                 "end_time": 1754297999000
             }
         }
+    },
+    "sp01": {
+        "version_name": "翡冷翠之春",
+        "start_time:": 1754575200000,
+        "end_time": 1758229199000,
+        "activity": {
+            "combat": {
+                "event_type": "SideStory",
+                "start_time": 1754575200000,
+                "end_time": 1757926799000
+            }
+        }
     }
 }

@@ -88,5 +88,23 @@
                 }
             }
         }
+    },
+    "sp01": {
+        "version_name": "翡冷翠之春",
+        "start_time:": 1754532000000,
+        "end_time": 1758229199000,
+        "activity": {
+            "combat": {
+                "event_type": "SideStory",
+                "start_time": 1754532000000,
+                "end_time": 1757883599000
+            },
+            "re-release": {
+                "name": "圣火纪行：东区黎明",
+                "alias": "圣火",
+                "start_time": 1757106000000,
+                "end_time": 1757969999000
+            }
+        }
     }
 }
