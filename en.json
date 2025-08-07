@@ -103,7 +103,55 @@
             "combat": {
                 "event_type": "SideStory",
                 "start_time": 1754575200000,
-                "end_time": 1757926799000
+                "end_time": 1757926799000,
+                "override": {
+                    "FlagInActivityMain": {
+                        "recognition": {
+                            "param": {
+                                "roi": [
+                                    1029,
+                                    33,
+                                    96,
+                                    22
+                                ],
+                                "expected": "成就",
+                                "only_rec": true
+                            }
+                        }
+                    },
+                    "ActivityMainChapter": {
+                        "recognition": {
+                            "type": "TemplateMatch",
+                            "param": {
+                                "roi": [
+                                    893,
+                                    489,
+                                    366,
+                                    170
+                                ],
+                                "template": "Combat/Activity/ActivityMainChapter_sp01.png"
+                            }
+                        }
+                    },
+                    "ActivityClickCurStage": {
+                        "action": {
+                            "param": {
+                                "target": [
+                                    531,
+                                    52,
+                                    68,
+                                    34
+                                ]
+                            }
+                        }
+                    },
+                    "FlagInActivityStage": {
+                        "next": [
+                            "ReadyForAction"
+                        ],
+                        "interrupt": []
+                    }
+                }
             }
         }
     }
