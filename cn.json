@@ -97,13 +97,7 @@
             "combat": {
                 "event_type": "SideStory",
                 "start_time": 1754532000000,
-                "end_time": 1757883599000
-            },
-            "re-release": {
-                "name": "圣火纪行：东区黎明",
-                "alias": "圣火",
-                "start_time": 1757106000000,
-                "end_time": 1757969999000,
+                "end_time": 1757883599000,
                 "override": {
                     "FlagInActivityMain": {
                         "recognition": {
@@ -152,6 +146,12 @@
                         "interrupt": []
                     }
                 }
+            },
+            "re-release": {
+                "name": "圣火纪行：东区黎明",
+                "alias": "圣火",
+                "start_time": 1757106000000,
+                "end_time": 1757969999000
             }
         }
     }
