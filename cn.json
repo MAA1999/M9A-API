@@ -128,14 +128,23 @@
                         }
                     },
                     "ActivityClickCurStage": {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    523,
+                                    109,
+                                    84,
+                                    54
+                                ],
+                                "expected": [
+                                    "信条"
+                                ]
+                            }
+                        },
                         "action": {
                             "param": {
-                                "target": [
-                                    531,
-                                    52,
-                                    68,
-                                    34
-                                ]
+                                "target": true
                             }
                         }
                     },
