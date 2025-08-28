@@ -118,12 +118,15 @@
                             "type": "TemplateMatch",
                             "param": {
                                 "roi": [
-                                    893,
-                                    489,
-                                    366,
-                                    170
+                                    17,
+                                    507,
+                                    1263,
+                                    213
                                 ],
-                                "template": "Combat/Activity/ActivityMainChapter_sp01.png"
+                                "template": [
+                                    "Combat/Activity/ActivityMainChapter_sp01.png",
+                                    "Combat/Activity/ActivityMainChapter_sp01_1.png"
+                                ]
                             }
                         }
                     },
