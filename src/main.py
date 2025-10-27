@@ -9,7 +9,7 @@ def save_activity_data(resource, data):
     将活动数据保存到对应语言的JSON文件中
 
     Args:
-        resource: 语言资源标识 ('cn', 'en', 'jp')
+        resource: 语言资源标识 ('cn', 'en', 'jp', 'tw')
         data: 要保存的数据，格式为 {version_id: {version_info}}
 
     Returns:
@@ -69,7 +69,7 @@ def save_activity_data(resource, data):
 
 
 if __name__ == "__main__":
-    for resource in ["cn", "en", "jp"]:
+    for resource in ["cn", "en", "jp", "tw"]:
         success, result = getContent(resource)
         if success:
             activity = analyzeContent(resource, result[-1])

@@ -1,6 +1,7 @@
 import re
 import json
 from datetime import datetime
+from typing import Optional
 
 import pytz
 from bs4 import BeautifulSoup
@@ -197,6 +198,64 @@ def analyzeContent(resource: str, content):
                 ) = convert_to_timestamps(re_release_duration)
                 continue
 
+    elif resource == "tw":
+
+        soup = BeautifulSoup(content, "html.parser")
+        tz_tw = pytz.timezone("Asia/Taipei")
+        base_year = datetime.now(tz_tw).year
+        base_month = None
+
+        news_time_tag = soup.find("div", class_="news-time")
+        if news_time_tag:
+            news_time_match = re.search(r"(\d{4})/(\d{2})/(\d{2})", news_time_tag.get_text())
+            if news_time_match:
+                base_year = int(news_time_match.group(1))
+                base_month = int(news_time_match.group(2))
+
+        p_tags = soup.find_all("p")
+        current_section = None
+
+        for p in p_tags:
+            text = p.get_text().strip()
+            if not text:
+                continue
+
+            if "全新主線" in text or "活動正篇" in text:
+                activity.setdefault("combat", {})
+                activity["combat"]["event_type"] = "MainStory"
+                current_section = "combat"
+                continue
+
+            if "軼事" in text:
+                activity.setdefault("anecdote", {})
+                current_section = "anecdote"
+                continue
+
+            if "限時重映" in text and "活動" in text:
+                activity.setdefault("re-release", {})
+                current_section = "re-release"
+                continue
+
+            if current_section:
+                duration_text = extract_tw_duration_segment(text)
+                if duration_text:
+                    try:
+                        formatted = process_combat_duration_tw(
+                            duration_text, base_year, base_month
+                        )
+                        (
+                            activity[current_section]["start_time"],
+                            activity[current_section]["end_time"],
+                        ) = convert_to_timestamps(formatted)
+                        if current_section == "combat":
+                            current_section = None
+                        elif current_section == "anecdote":
+                            current_section = None
+                        elif current_section == "re-release":
+                            current_section = None
+                    except ValueError:
+                        continue
+
     return activity
 
 
@@ -375,3 +434,87 @@ def process_combat_duration_jp(duration: str):
     duration = f"{start_date.strftime('%Y-%m-%d %H:%M')} - {end_date.strftime('%Y-%m-%d %H:%M')} (UTC+9)"
 
     return duration
+
+
+def extract_tw_duration_segment(text: str):
+    match = re.search(r"(\d{1,2}/\d{1,2}.*)", text)
+    if match:
+        return match.group(1)
+    return None
+
+
+def process_combat_duration_tw(
+    duration: str, base_year: int, base_month: Optional[int]
+):
+
+    taipei_tz = pytz.timezone("Asia/Taipei")
+
+    cleaned = duration
+    cleaned = cleaned.replace("版本更新後", "10:00")
+    cleaned = cleaned.replace("版本更新后", "10:00")
+    cleaned = cleaned.replace("～", "-")
+    cleaned = cleaned.replace("~", "-")
+    cleaned = cleaned.replace("〜", "-")
+    cleaned = cleaned.replace("—", "-")
+    cleaned = cleaned.replace("－", "-")
+    cleaned = cleaned.replace("至", "-")
+    cleaned = re.sub(r"^[^\d]+", "", cleaned)
+    cleaned = re.sub(r"[【】「」]", "", cleaned)
+
+    pattern = r"(\d{1,2})/(\d{1,2})\s*(\d{1,2}:\d{2})?\s*-\s*(\d{1,2})/(\d{1,2})\s*(\d{1,2}:\d{2})"
+    match = re.search(pattern, cleaned)
+
+    if not match:
+        raise ValueError(f"无法解析台湾站时间范围: {duration}")
+
+    start_month, start_day, start_time, end_month, end_day, end_time = match.groups()
+    start_month = int(start_month)
+    start_day = int(start_day)
+    end_month = int(end_month)
+    end_day = int(end_day)
+
+    if not start_time:
+        start_time = "10:00"
+
+    start_hour, start_minute = map(int, start_time.split(":"))
+    end_hour, end_minute = map(int, end_time.split(":"))
+
+    def resolve_year(month: int) -> int:
+        year = base_year
+        if base_month is not None:
+            diff = month - base_month
+            if diff <= -6:
+                year = base_year + 1
+            elif diff >= 6:
+                year = base_year - 1
+        return year
+
+    start_year = resolve_year(start_month)
+    end_year = resolve_year(end_month)
+
+    if (end_year, end_month, end_day, end_hour, end_minute) < (
+        start_year,
+        start_month,
+        start_day,
+        start_hour,
+        start_minute,
+    ):
+        if end_month < start_month or (end_month == start_month and end_day < start_day):
+            end_year = start_year + 1
+        else:
+            end_year = start_year
+
+    start_datetime = taipei_tz.localize(
+        datetime(start_year, start_month, start_day, start_hour, start_minute)
+    )
+    end_datetime = taipei_tz.localize(
+        datetime(end_year, end_month, end_day, end_hour, end_minute)
+    )
+
+    if end_minute == 59:
+        end_datetime = end_datetime.replace(second=59)
+
+    return (
+        f"{start_datetime.strftime('%Y-%m-%d %H:%M')} - "
+        f"{end_datetime.strftime('%Y-%m-%d %H:%M')} (UTC+8)"
+    )
