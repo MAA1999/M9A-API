@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>M9A Activity Data API</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; }
+    h1 { color: #333; }
+    .endpoint { background: #f5f5f5; padding: 10px; margin: 10px 0; border-radius: 4px; }
+    code { color: #e83e8c; }
+    a { color: #007bff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    pre { background: #fff; padding: 10px; overflow-x: auto; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+  <h1>M9A Activity Data API</h1>
+  <p>活动数据 JSON API 端点：</p>
+  
+  <div class="endpoint">
+    <h3>中文 (CN)</h3>
+    <code><a href="api/resource/data/activity/cn.json">api/resource/data/activity/cn.json</a></code>
+  </div>
+  
+  <div class="endpoint">
+    <h3>English (EN)</h3>
+    <code><a href="api/resource/data/activity/en.json">api/resource/data/activity/en.json</a></code>
+  </div>
+  
+  <div class="endpoint">
+    <h3>日本語 (JP)</h3>
+    <code><a href="api/resource/data/activity/jp.json">api/resource/data/activity/jp.json</a></code>
+  </div>
+  
+  <div class="endpoint">
+    <h3>繁體中文 (TW)</h3>
+    <code><a href="api/resource/data/activity/tw.json">api/resource/data/activity/tw.json</a></code>
+  </div>
+  
+  <hr>
+  
+  <h2>程序化访问</h2>
+  <div class="endpoint">
+    <h3>📋 Manifest 文件列表</h3>
+    <p><code><a href="api/resource/data/manifest.json">api/resource/data/manifest.json</a></code></p>
+    <p style="font-size: 14px; color: #666;">
+      包含所有文件的元数据（文件名、路径、大小、更新时间）<br>
+      程序可以读取此文件自动发现并下载所有数据文件
+    </p>
+  </div>
+  
+  <details style="margin: 20px 0; padding: 15px; background: #f9f9f9; border-radius: 4px;">
+    <summary style="cursor: pointer; font-weight: bold;">💡 示例：使用 Python 批量下载所有文件</summary>
+    <pre style="margin-top: 10px;"><code>import requests
+import json
+
+# 读取 manifest
+base_url = 'https://maa1999.github.io/M9A-Act-Data'
+manifest = requests.get(f'{base_url}/api/resource/data/manifest.json').json()
+
+# 下载所有文件
+for file in manifest['files']:
+    url = f"{base_url}/api/resource/data/{file['path']}"
+    response = requests.get(url)
+    with open(file['name'], 'wb') as f:
+        f.write(response.content)
+    print(f"Downloaded: {file['name']} ({file['size']} bytes)")
+
+print(f"Total: {len(manifest['files'])} files")
+print(f"Last updated: {manifest['updated']}")</code></pre>
+  </details>
+  
+  <hr>
+  <p style="color: #666; font-size: 14px;">
+    API Base URL: <code>https://maa1999.github.io/M9A-Act-Data/api/resource/data/activity/</code>
+  </p>
+</body>
+</html>

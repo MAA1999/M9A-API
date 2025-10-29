@@ -1,0 +1,10 @@
+{
+  "directories": [
+    {
+      "name": "activity",
+      "manifest": "activity/manifest.json",
+      "updated": 1761727332000
+    }
+  ],
+  "updated": 1761727332000
+}

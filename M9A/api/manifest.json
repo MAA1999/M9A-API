@@ -1,0 +1,10 @@
+{
+  "directories": [
+    {
+      "name": "resource",
+      "manifest": "resource/manifest.json",
+      "updated": 1761727332000
+    }
+  ],
+  "updated": 1761727332000
+}

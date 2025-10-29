@@ -24,6 +24,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Generate manifest.json files
+        run: python tools/generate_manifest.py
+
       - name: Upload M9A as Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
