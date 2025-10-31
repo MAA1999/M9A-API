@@ -27,23 +27,31 @@ if response.status_code == 200:
     print(f"新图片SHA256: {new_hash}")
 
     # 检查文件是否已存在并计算其哈希值
+    file_updated = False
     if os.path.exists(filepath):
         with open(filepath, "rb") as f:
             existing_hash = hashlib.sha256(f.read()).hexdigest()
         print(f"现有图片SHA256: {existing_hash}")
 
         if new_hash == existing_hash:
-            print("图片内容相同，跳过保存")
+            print("✓ 图片内容相同，无需更新")
             exit(0)
         else:
-            print("图片内容不同，将更新文件")
+            print("✓ 图片内容不同，将更新文件")
+            file_updated = True
+    else:
+        print("✓ 本地无此图片，将保存新文件")
+        file_updated = True
 
     # 保存PNG图片
     with open(filepath, "wb") as f:
         f.write(response.content)
 
-    print(f"图片已保存到: {filepath}")
-    print(f"文件大小: {len(response.content)} 字节")
+    if file_updated:
+        print(f"✓ 图片已更新: {filepath}")
+    else:
+        print(f"✓ 图片已保存: {filepath}")
+    print(f"  文件大小: {len(response.content)} 字节")
 else:
     print(f"下载失败，状态码: {response.status_code}")
     exit(1)

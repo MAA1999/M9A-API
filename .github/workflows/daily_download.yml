@@ -33,9 +33,10 @@ jobs:
       - name: Check for changes
         id: git-check
         run: |
-          if ! git diff --quiet M9A/api/images/; then
+          git add M9A/api/images/
+          if ! git diff --cached --quiet; then
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "检测到图片变化"
+            echo "检测到图片变化或新增"
           else
             echo "changed=false" >> $GITHUB_OUTPUT
             echo "图片无变化"
@@ -46,6 +47,5 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add M9A/api/images/
           git commit -m "chore: update mojing daily image [$(date +'%Y-%m-%d')]"
           git push
