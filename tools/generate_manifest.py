@@ -68,16 +68,17 @@ def generate_file_manifest(directory: Path) -> dict:
     Generate manifest for a directory containing data files.
 
     Args:
-        directory: Path to the directory containing JSON files
+        directory: Path to the directory containing files
 
     Returns:
         Dict with 'files' list and 'updated' timestamp
     """
     files = []
 
-    # Find all JSON files (excluding manifest.json itself)
-    for file in sorted(directory.glob("*.json")):
-        if file.name == "manifest.json":
+    # Find all files (excluding manifest.json itself)
+    for file in sorted(directory.glob("*")):
+        # Skip directories and manifest.json itself
+        if file.is_dir() or file.name == "manifest.json":
             continue
 
         stat_info = file.stat()
@@ -150,6 +151,47 @@ def write_manifest(manifest: dict, output_path: Path):
     print(f"✓ Generated: {output_path}")
 
 
+def generate_manifests_recursively(directory: Path) -> dict | None:
+    """
+    Recursively generate manifests for a directory and its subdirectories.
+
+    Args:
+        directory: Path to the directory to process
+
+    Returns:
+        The manifest dict for this directory, or None if directory doesn't exist
+    """
+    if not directory.exists():
+        return None
+
+    # Find all subdirectories (excluding hidden dirs and __pycache__)
+    subdirs = [
+        d
+        for d in sorted(directory.iterdir())
+        if d.is_dir() and not d.name.startswith(".") and d.name != "__pycache__"
+    ]
+
+    # If there are subdirectories, process them recursively
+    if subdirs:
+        subdir_manifests = []
+        for subdir in subdirs:
+            subdir_manifest = generate_manifests_recursively(subdir)
+            if subdir_manifest is not None:
+                # Write the subdirectory's manifest
+                manifest_path = subdir / "manifest.json"
+                write_manifest(subdir_manifest, manifest_path)
+
+                subdir_manifests.append(
+                    {"name": subdir.name, "manifest": f"{subdir.name}/manifest.json"}
+                )
+
+        # Generate directory manifest with subdirectories
+        return generate_directory_manifest(directory, subdir_manifests)
+    else:
+        # Leaf directory - generate file manifest
+        return generate_file_manifest(directory)
+
+
 def main():
     """Generate all manifest files in the M9A API directory structure."""
     # Get the repository root directory
@@ -164,34 +206,15 @@ def main():
     print(f"Base directory: {m9a_root}")
     print()
 
-    # Generate activity/manifest.json (leaf level - contains files)
-    activity_dir = m9a_root / "api" / "resource" / "data" / "activity"
-    if activity_dir.exists():
-        activity_manifest = generate_file_manifest(activity_dir)
-        write_manifest(activity_manifest, activity_dir / "manifest.json")
-    else:
-        print(f"Warning: {activity_dir} not found, skipping")
-
-    # Generate data/manifest.json
-    data_dir = m9a_root / "api" / "resource" / "data"
-    data_manifest = generate_directory_manifest(
-        data_dir, [{"name": "activity", "manifest": "activity/manifest.json"}]
-    )
-    write_manifest(data_manifest, data_dir / "manifest.json")
-
-    # Generate resource/manifest.json
-    resource_dir = m9a_root / "api" / "resource"
-    resource_manifest = generate_directory_manifest(
-        resource_dir, [{"name": "data", "manifest": "data/manifest.json"}]
-    )
-    write_manifest(resource_manifest, resource_dir / "manifest.json")
-
-    # Generate api/manifest.json (root)
+    # Start recursive generation from api directory
     api_dir = m9a_root / "api"
-    api_manifest = generate_directory_manifest(
-        api_dir, [{"name": "resource", "manifest": "resource/manifest.json"}]
-    )
-    write_manifest(api_manifest, api_dir / "manifest.json")
+    if not api_dir.exists():
+        print(f"Error: api directory not found at {api_dir}")
+        return 1
+
+    api_manifest = generate_manifests_recursively(api_dir)
+    if api_manifest:
+        write_manifest(api_manifest, api_dir / "manifest.json")
 
     print()
     print("✅ All manifest files generated successfully!")
