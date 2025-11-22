@@ -1,0 +1,74 @@
+name: Sync Resource Data from M9A
+
+on:
+  # 支持手动触发
+  workflow_dispatch:
+  # 接收来自 M9A 仓库的触发
+  repository_dispatch:
+    types: [sync-resource-data]
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Download data from M9A
+        run: |
+          # 使用 git sparse-checkout 下载整个 data 目录
+          echo "正在克隆 M9A 仓库的 data 目录..."
+          
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/MAA1999/M9A.git temp_m9a
+          cd temp_m9a
+          git sparse-checkout set assets/resource/data
+          cd ..
+          
+          # 复制 data 目录到本仓库的 M9A/api/resource/data
+          echo "正在同步数据..."
+          rm -rf M9A/api/resource/data
+          mkdir -p M9A/api/resource
+          cp -r temp_m9a/assets/resource/data M9A/api/resource/
+          
+          # 清理临时目录
+          rm -rf temp_m9a
+          
+          echo "数据同步完成"
+      
+      - name: Check for changes
+        id: git-check
+        run: |
+          git add M9A/api/resource/data/
+          if ! git diff --cached --quiet; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "检测到数据变化"
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "数据无变化"
+          fi
+      
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "chore: sync resource data from M9A [$(date +'%Y-%m-%d')]"
+          git push
+      
+      - name: Trigger Jekyll deployment
+        if: steps.git-check.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'jekyll-gh-pages.yml',
+              ref: 'master'
+            })
