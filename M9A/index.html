@@ -51,7 +51,7 @@
       <h3>📋 Activity Manifest</h3>
       <code><a href="api/resource/data/activity/manifest.json">api/resource/data/activity/manifest.json</a></code>
       <p style="font-size: 14px; color: #666; margin: 5px 0 0 0;">
-        文件列表及元数据（文件名、大小、更新时间）
+        文件列表及元数据（文件名、路径、大小、更新时间、SHA256 哈希）
       </p>
     </div>
   </div>
@@ -106,11 +106,18 @@ manifest = requests.get(f'{base_url}/resource/data/activity/manifest.json').json
 
 # 下载所有文件
 for file in manifest['files']:
-    url = f"{base_url}/resource/data/activity/{file['path']}"
+    url = f"{base_url}/{file['path']}"
     response = requests.get(url)
-    with open(file['name'], 'wb') as f:
-        f.write(response.content)
-    print(f"✓ {file['name']} ({file['size']} bytes, updated: {file['updated']})")
+    
+    # 验证文件完整性
+    import hashlib
+    downloaded_hash = hashlib.sha256(response.content).hexdigest()
+    if downloaded_hash == file['hash']:
+        with open(file['name'], 'wb') as f:
+            f.write(response.content)
+        print(f"✓ {file['name']} ({file['size']} bytes)")
+    else:
+        print(f"✗ {file['name']} hash mismatch!")
 
 print(f"\nTotal: {len(manifest['files'])} files")</code></pre>
     </details>
@@ -122,13 +129,14 @@ print(f"\nTotal: {len(manifest['files'])} files")</code></pre>
 // 读取 images manifest
 const manifest = await fetch(`${baseUrl}/images/manifest.json`).then(r => r.json());
 
-// 找到一图流图片
+// 找到魔精图片
 const mojingFile = manifest.files.find(f => f.name === 'mojing_tjb.png');
 console.log(`Latest update: ${new Date(mojingFile.updated)}`);
+console.log(`SHA256: ${mojingFile.hash}`);
 
 // 显示图片
 const img = document.createElement('img');
-img.src = `${baseUrl}/images/${mojingFile.path}`;
+img.src = `${baseUrl}/${mojingFile.path}`;
 document.body.appendChild(img);</code></pre>
     </details>
   </div>
