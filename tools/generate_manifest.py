@@ -82,8 +82,8 @@ def generate_file_manifest(directory: Path) -> dict:
             continue
 
         stat_info = file.stat()
-        # Get file's last commit time from Git (or mtime as fallback)
-        file_mtime_ms = get_file_commit_time(file)
+        # 使用文件系统的修改时间（毫秒）
+        file_mtime_ms = int(stat_info.st_mtime * 1000)
 
         file_info = {
             "name": file.name,
