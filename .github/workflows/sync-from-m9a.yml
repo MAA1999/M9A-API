@@ -18,7 +18,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets._TOKEN || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Download data from M9A
         run: |
@@ -32,9 +32,10 @@ jobs:
           
           # 复制 data 目录到本仓库的 M9A/api/resource/data
           echo "正在同步数据..."
-          rm -rf M9A/api/resource/data
+          # 只删除从 M9A 同步过来的文件，保留 manifest.json 等本地生成的文件
+          find M9A/api/resource/data -type f ! -name 'manifest.json' -delete 2>/dev/null || true
           mkdir -p M9A/api/resource
-          cp -r temp_m9a/assets/resource/data M9A/api/resource/
+          cp -r temp_m9a/assets/resource/data/* M9A/api/resource/data/ 2>/dev/null || mkdir -p M9A/api/resource/data
           
           # 清理临时目录
           rm -rf temp_m9a
@@ -60,3 +61,9 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git commit -m "chore: sync resource data from M9A [$(date +'%Y-%m-%d')]"
           git push
+      
+      - name: Trigger Jekyll deployment
+        if: steps.git-check.outputs.changed == 'true'
+        run: gh workflow run jekyll-gh-pages.yml
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
