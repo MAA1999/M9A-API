@@ -20,7 +20,7 @@
 <body>
   <h1>M9A API</h1>
   <div class="api-base">
-    <strong>API Base URL:</strong> <code>https://api.1999.fan/</code>
+    <strong>API Base URL:</strong> <code>https://api.1999.fan/api</code>
   </div>
 
   <div class="section">
@@ -99,7 +99,7 @@
       <summary style="cursor: pointer; font-weight: bold;">💡 Python：批量下载所有活动数据</summary>
       <pre style="margin-top: 10px;"><code>import requests
 
-base_url = 'https://api.1999.fan'
+base_url = 'https://api.1999.fan/api'
 
 # 读取 activity manifest
 manifest = requests.get(f'{base_url}/resource/data/activity/manifest.json').json()
@@ -117,7 +117,7 @@ print(f"\nTotal: {len(manifest['files'])} files")</code></pre>
 
     <details style="margin: 20px 0; padding: 15px; background: #f9f9f9; border-radius: 4px;">
       <summary style="cursor: pointer; font-weight: bold;">💡 JavaScript：获取最新的魔精图片</summary>
-      <pre style="margin-top: 10px;"><code>const baseUrl = 'https://api.1999.fan';
+      <pre style="margin-top: 10px;"><code>const baseUrl = 'https://api.1999.fan/api';
 
 // 读取 images manifest
 const manifest = await fetch(`${baseUrl}/images/manifest.json`).then(r => r.json());
