@@ -84,12 +84,13 @@ def get_file_commit_time(file_path: Path) -> int:
     return int(file_path.stat().st_mtime * 1000)
 
 
-def generate_file_manifest(directory: Path) -> dict:
+def generate_file_manifest(directory: Path, api_root: Path) -> dict:
     """
     Generate manifest for a directory containing data files.
 
     Args:
         directory: Path to the directory containing files
+        api_root: Path to the api directory (for calculating relative paths)
 
     Returns:
         Dict with 'files' list and 'updated' timestamp
@@ -108,9 +109,12 @@ def generate_file_manifest(directory: Path) -> dict:
         # 计算文件 hash
         file_hash = calculate_file_hash(file)
 
+        # 计算从 api 根目录开始的相对路径
+        relative_path = file.relative_to(api_root).as_posix()
+
         file_info = {
             "name": file.name,
-            "path": file.name,
+            "path": relative_path,
             "size": stat_info.st_size,
             "updated": file_mtime_ms,
             "hash": file_hash,
@@ -175,12 +179,13 @@ def write_manifest(manifest: dict, output_path: Path):
     print(f"✓ Generated: {output_path}")
 
 
-def generate_manifests_recursively(directory: Path) -> dict | None:
+def generate_manifests_recursively(directory: Path, api_root: Path) -> dict | None:
     """
     Recursively generate manifests for a directory and its subdirectories.
 
     Args:
         directory: Path to the directory to process
+        api_root: Path to the api directory (for calculating relative paths)
 
     Returns:
         The manifest dict for this directory, or None if directory doesn't exist
@@ -199,7 +204,7 @@ def generate_manifests_recursively(directory: Path) -> dict | None:
     if subdirs:
         subdir_manifests = []
         for subdir in subdirs:
-            subdir_manifest = generate_manifests_recursively(subdir)
+            subdir_manifest = generate_manifests_recursively(subdir, api_root)
             if subdir_manifest is not None:
                 # Write the subdirectory's manifest
                 manifest_path = subdir / "manifest.json"
@@ -213,7 +218,7 @@ def generate_manifests_recursively(directory: Path) -> dict | None:
         return generate_directory_manifest(directory, subdir_manifests)
     else:
         # Leaf directory - generate file manifest
-        return generate_file_manifest(directory)
+        return generate_file_manifest(directory, api_root)
 
 
 def main():
@@ -236,7 +241,7 @@ def main():
         print(f"Error: api directory not found at {api_dir}")
         return 1
 
-    api_manifest = generate_manifests_recursively(api_dir)
+    api_manifest = generate_manifests_recursively(api_dir, api_dir)
     if api_manifest:
         write_manifest(api_manifest, api_dir / "manifest.json")
 
