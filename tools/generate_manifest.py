@@ -210,8 +210,11 @@ def generate_manifests_recursively(directory: Path, api_root: Path) -> dict | No
                 manifest_path = subdir / "manifest.json"
                 write_manifest(subdir_manifest, manifest_path)
 
+                # 计算从 api 根目录开始的相对路径
+                relative_manifest_path = manifest_path.relative_to(api_root).as_posix()
+
                 subdir_manifests.append(
-                    {"name": subdir.name, "manifest": f"{subdir.name}/manifest.json"}
+                    {"name": subdir.name, "manifest": relative_manifest_path}
                 )
 
         # Generate directory manifest with subdirectories
