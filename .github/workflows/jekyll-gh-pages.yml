@@ -23,11 +23,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整 Git 历史
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
+
+      - name: Restore file timestamps from Git history
+        run: |
+          # 恢复 M9A/api 目录下所有文件的 Git 时间戳
+          find M9A/api -type f ! -name 'manifest.json' | while read file; do
+            commit_time=$(git log -1 --format="%at" -- "$file" 2>/dev/null)
+            if [ -n "$commit_time" ]; then
+              touch -d "@$commit_time" "$file"
+              echo "恢复: $file -> $(date -d @$commit_time '+%Y-%m-%d %H:%M:%S')"
+            fi
+          done
+          
+          echo "验证时间戳:"
+          ls -la M9A/api/images/ 2>/dev/null || true
+          ls -la M9A/api/resource/data/activity/ 2>/dev/null || true
 
       - name: Generate manifest.json files
         run: python tools/generate_manifest.py
