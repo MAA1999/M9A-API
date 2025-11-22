@@ -10,14 +10,35 @@ This script creates a hierarchical manifest structure:
 
 Each manifest contains either:
 - "directories": list of subdirectories with their manifest paths
-- "files": list of JSON files with metadata (name, path, size)
+- "files": list of files with metadata (name, path, size, updated, hash)
+
+File hash: SHA256 of file content for integrity verification
 """
 
+import hashlib
 import json
 import os
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
+
+
+def calculate_file_hash(file_path: Path) -> str:
+    """
+    Calculate SHA256 hash of a file.
+
+    Args:
+        file_path: Path to the file
+
+    Returns:
+        Hex string of SHA256 hash
+    """
+    sha256 = hashlib.sha256()
+    with open(file_path, "rb") as f:
+        # Read in chunks to handle large files
+        for chunk in iter(lambda: f.read(8192), b""):
+            sha256.update(chunk)
+    return sha256.hexdigest()
 
 
 def get_current_timestamp():
@@ -84,12 +105,15 @@ def generate_file_manifest(directory: Path) -> dict:
         stat_info = file.stat()
         # 使用文件系统的修改时间（毫秒）
         file_mtime_ms = int(stat_info.st_mtime * 1000)
+        # 计算文件 hash
+        file_hash = calculate_file_hash(file)
 
         file_info = {
             "name": file.name,
             "path": file.name,
             "size": stat_info.st_size,
             "updated": file_mtime_ms,
+            "hash": file_hash,
         }
         files.append(file_info)
 
