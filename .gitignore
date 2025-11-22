@@ -1,1 +1,4 @@
 __pycache__/
+
+# 自动生成的 manifest 文件（由 CI 生成）
+**/manifest.json
