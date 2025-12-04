@@ -2,8 +2,8 @@ name: Daily Mojing Image Download
 
 on:
   # 每天UTC时间0:05运行（北京时间上午8:05）
-  schedule:
-    - cron: '5 0 * * *'
+  # schedule:
+  #   - cron: '5 0 * * *'
   # 也支持手动触发
   workflow_dispatch:
 
