@@ -731,5 +731,43 @@
                 }
             }
         }
+    },
+    "3.6": {
+        "version_name": "人们向何处去",
+        "start_time": 1775700000000,
+        "end_time": 1777496399000,
+        "activity": {
+            "combat": {
+                "event_type": "SideStory",
+                "start_time": 1775700000000,
+                "end_time": 1777237199000,
+                "override": {
+                    "FlagInActivityStage": {
+                        "recognition": {
+                            "param": {
+                                "roi": [
+                                    1089,
+                                    635,
+                                    131,
+                                    41
+                                ]
+                            }
+                        }
+                    },
+                    "ActivityTargetLevelRec": {
+                        "recognition": {
+                            "param": {
+                                "roi": [
+                                    1036,
+                                    573,
+                                    57,
+                                    26
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
