@@ -50,7 +50,7 @@
             "SOSDiceGiveUp",
             "SOSContinue",
             "SOSEventEnd",
-            "SOSEventEndMessage",
+            "SOSSelectOption",
             "CloseTip"
         ],
         "EncounterAlongTheWay": "@stats+@artefact+@harmonic+@resonator+@others+@message_left+SOSClickEventRec",
@@ -1239,7 +1239,7 @@
                 "interrupts": "@TheOnlyWay"
             },
             "混合物": {
-                "actions":[
+                "actions": [
                     {
                         "type": "SelectOption",
                         "method": "HSV"
