@@ -17,8 +17,6 @@ File hash: SHA256 of file content for integrity verification
 
 import hashlib
 import json
-import os
-import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -44,44 +42,6 @@ def calculate_file_hash(file_path: Path) -> str:
 def get_current_timestamp():
     """Get current UTC timestamp in milliseconds."""
     return int(datetime.now(timezone.utc).timestamp() * 1000)
-
-
-def get_file_commit_time(file_path: Path) -> int:
-    """
-    Get the last commit time of a file from Git history.
-    Falls back to filesystem mtime if Git is not available or file is not tracked.
-
-    Args:
-        file_path: Path to the file
-
-    Returns:
-        Unix timestamp in milliseconds
-    """
-    try:
-        # Get the last commit timestamp for this file
-        # %ct = committer date, UNIX timestamp
-        result = subprocess.run(
-            ["git", "log", "-1", "--format=%ct", "--", str(file_path)],
-            capture_output=True,
-            text=True,
-            cwd=file_path.parent,
-            timeout=5,
-        )
-
-        if result.returncode == 0 and result.stdout.strip():
-            # Convert seconds to milliseconds
-            commit_time_sec = int(result.stdout.strip())
-            return commit_time_sec * 1000
-    except (
-        subprocess.TimeoutExpired,
-        subprocess.CalledProcessError,
-        FileNotFoundError,
-        ValueError,
-    ):
-        pass
-
-    # Fallback to filesystem mtime
-    return int(file_path.stat().st_mtime * 1000)
 
 
 def generate_file_manifest(directory: Path, api_root: Path) -> dict:
@@ -130,29 +90,32 @@ def generate_file_manifest(directory: Path, api_root: Path) -> dict:
     return {"files": files, "updated": most_recent}
 
 
-def generate_directory_manifest(base_path: Path, subdirs: list[dict]) -> dict:
+def generate_directory_manifest(api_root: Path, subdirs: list[dict]) -> dict:
     """
     Generate manifest for a directory containing subdirectories.
 
     Args:
-        base_path: Path to the directory containing subdirectories
-        subdirs: List of subdirectory info dicts with 'name' and 'manifest' keys
+        api_root: Path to the api directory (for resolving manifest paths)
+        subdirs: List of subdirectory info dicts with 'name', 'manifest',
+                 and optionally 'updated' keys
 
     Returns:
         Dict with 'directories' list (with updated timestamps) and 'updated' timestamp
     """
-    # Add 'updated' timestamp to each subdirectory by reading its manifest
     enriched_subdirs = []
     for subdir_info in subdirs:
-        subdir_manifest_path = base_path / subdir_info["manifest"]
-
-        # Read the subdirectory's manifest to get its updated timestamp
-        if subdir_manifest_path.exists():
-            with open(subdir_manifest_path, "r", encoding="utf-8") as f:
-                subdir_manifest = json.load(f)
-                subdir_updated = subdir_manifest.get("updated", get_current_timestamp())
+        if "updated" in subdir_info:
+            # Use the in-memory timestamp from the recursive call (avoids disk I/O)
+            subdir_updated = subdir_info["updated"]
         else:
-            subdir_updated = get_current_timestamp()
+            # Fallback: read from disk for backward compatibility
+            subdir_manifest_path = api_root / subdir_info["manifest"]
+            if subdir_manifest_path.exists():
+                with open(subdir_manifest_path, "r", encoding="utf-8") as f:
+                    subdir_manifest = json.load(f)
+                    subdir_updated = subdir_manifest.get("updated", get_current_timestamp())
+            else:
+                subdir_updated = get_current_timestamp()
 
         enriched_subdirs.append(
             {
@@ -214,11 +177,15 @@ def generate_manifests_recursively(directory: Path, api_root: Path) -> dict | No
                 relative_manifest_path = manifest_path.relative_to(api_root).as_posix()
 
                 subdir_manifests.append(
-                    {"name": subdir.name, "manifest": relative_manifest_path}
+                    {
+                        "name": subdir.name,
+                        "manifest": relative_manifest_path,
+                        "updated": subdir_manifest["updated"],
+                    }
                 )
 
         # Generate directory manifest with subdirectories
-        return generate_directory_manifest(directory, subdir_manifests)
+        return generate_directory_manifest(api_root, subdir_manifests)
     else:
         # Leaf directory - generate file manifest
         return generate_file_manifest(directory, api_root)

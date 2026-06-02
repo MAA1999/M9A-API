@@ -88,28 +88,12 @@
   </div>
 
   <div class="section">
-    <h2>🖼️ 图片 (Images)</h2>
-    <div class="endpoint">
-      <h3>魔精统计表</h3>
-      <code><a href="api/images/mojing_tjb.png">api/images/mojing_tjb.png</a></code>
-      <p style="font-size: 14px; color: #666; margin: 5px 0 0 0;">
-        每日自动更新（UTC 0:05）
-      </p>
-    </div>
-    
-    <div class="endpoint" style="margin-top: 15px;">
-      <h3>📋 Images Manifest</h3>
-      <code><a href="api/images/manifest.json">api/images/manifest.json</a></code>
-    </div>
-  </div>
-
-  <div class="section">
     <h2>🗂️ Manifest 层级结构</h2>
     <div class="endpoint">
       <h3>根 Manifest</h3>
       <code><a href="api/manifest.json">api/manifest.json</a></code>
       <p style="font-size: 14px; color: #666; margin: 5px 0 0 0;">
-        包含 images/ 和 resource/ 两个子目录的信息
+        包含 resource/ 子目录的信息
       </p>
     </div>
     
@@ -154,21 +138,28 @@ print(f"\nTotal: {len(manifest['files'])} files")</code></pre>
     </details>
 
     <details style="margin: 20px 0; padding: 15px; background: #f9f9f9; border-radius: 4px;">
-      <summary style="cursor: pointer; font-weight: bold;">💡 JavaScript：获取最新的魔精图片</summary>
+      <summary style="cursor: pointer; font-weight: bold;">💡 JavaScript：批量下载所有活动数据</summary>
       <pre style="margin-top: 10px;"><code>const baseUrl = 'https://api.1999.fan/api';
 
-// 读取 images manifest
-const manifest = await fetch(`${baseUrl}/images/manifest.json`).then(r => r.json());
+// 读取 activity manifest
+const manifest = await fetch(`${baseUrl}/resource/data/activity/manifest.json`).then(r => r.json());
 
-// 找到魔精图片
-const mojingFile = manifest.files.find(f => f.name === 'mojing_tjb.png');
-console.log(`Latest update: ${new Date(mojingFile.updated)}`);
-console.log(`SHA256: ${mojingFile.hash}`);
+// 下载所有文件并验证完整性
+for (const file of manifest.files) {
+    const response = await fetch(`${baseUrl}/${file.path}`);
+    const buffer = await response.arrayBuffer();
+    const hashBuffer = await crypto.subtle.digest('SHA-256', buffer);
+    const hashHex = [...new Uint8Array(hashBuffer)]
+        .map(b => b.toString(16).padStart(2, '0'))
+        .join('');
+    if (hashHex === file.hash) {
+        console.log(`✓ ${file.name} (${file.size} bytes)`);
+    } else {
+        console.log(`✗ ${file.name} hash mismatch!`);
+    }
+}
 
-// 显示图片
-const img = document.createElement('img');
-img.src = `${baseUrl}/${mojingFile.path}`;
-document.body.appendChild(img);</code></pre>
+console.log(`Total: ${manifest.files.length} files`);</code></pre>
     </details>
   </div>
   

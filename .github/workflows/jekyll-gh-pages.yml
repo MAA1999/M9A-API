@@ -43,7 +43,6 @@ jobs:
           done
           
           echo "验证时间戳:"
-          ls -la M9A/api/images/ 2>/dev/null || true
           ls -la M9A/api/resource/data/activity/ 2>/dev/null || true
 
       - name: Generate manifest.json files
