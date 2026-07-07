@@ -15,6 +15,7 @@
     a:hover { text-decoration: underline; }
     pre { background: #fff; padding: 10px; overflow-x: auto; border: 1px solid #ddd; }
     .api-base { background: #e7f3ff; padding: 10px; border-left: 4px solid #007bff; margin: 20px 0; }
+    .compat { background: #fff3cd; padding: 8px 12px; border-left: 4px solid #ffc107; margin: 15px 0; font-size: 14px; color: #664d03; }
   </style>
 </head>
 <body>
@@ -23,35 +24,40 @@
     <strong>API Base URL:</strong> <code>https://api.1999.fan/api</code>
   </div>
 
+  <div class="compat">
+    <strong>路径变更通知：</strong>数据路径已从 <code>api/resource/data/</code> 迁移至 <code>api/data/</code>。
+    旧路径 <code>api/resource/data/</code> 暂时保留以兼容旧版本客户端，两个路径内容完全一致。
+  </div>
+
   <div class="section">
     <h2>📊 活动数据 (Activity Data)</h2>
     <p>多语言活动数据 JSON 文件：</p>
-    
+
     <div class="endpoint">
       <h3>中文 (CN)</h3>
-      <code><a href="api/resource/data/activity/cn.json">api/resource/data/activity/cn.json</a></code>
+      <code><a href="api/data/activity/cn.json">api/data/activity/cn.json</a></code>
     </div>
-    
+
     <div class="endpoint">
       <h3>English (EN)</h3>
-      <code><a href="api/resource/data/activity/en.json">api/resource/data/activity/en.json</a></code>
+      <code><a href="api/data/activity/en.json">api/data/activity/en.json</a></code>
     </div>
-    
+
     <div class="endpoint">
       <h3>日本語 (JP)</h3>
-      <code><a href="api/resource/data/activity/jp.json">api/resource/data/activity/jp.json</a></code>
+      <code><a href="api/data/activity/jp.json">api/data/activity/jp.json</a></code>
     </div>
-    
+
     <div class="endpoint">
       <h3>繁體中文 (TW)</h3>
-      <code><a href="api/resource/data/activity/tw.json">api/resource/data/activity/tw.json</a></code>
+      <code><a href="api/data/activity/tw.json">api/data/activity/tw.json</a></code>
     </div>
-    
+
     <div class="endpoint" style="margin-top: 15px;">
-      <h3>📋 Activity Manifest</h3>
-      <code><a href="api/resource/data/activity/manifest.json">api/resource/data/activity/manifest.json</a></code>
+      <h3>📦 Activity Manifest</h3>
+      <code><a href="api/data/activity/manifest.json">api/data/activity/manifest.json</a></code>
       <p style="font-size: 14px; color: #666; margin: 5px 0 0 0;">
-        文件列表及元数据（文件名、路径、大小、更新时间、SHA256 哈希）
+        文件列表及元数据（文件名、路径、大小、更新时间、SHA256 哈希）。
       </p>
     </div>
   </div>
@@ -60,30 +66,30 @@
     <h2>⚔️ 战斗数据 (Combat Data)</h2>
     <div class="endpoint">
       <h3>战斗物品</h3>
-      <code><a href="api/resource/data/combat/items.json">api/resource/data/combat/items.json</a></code>
+      <code><a href="api/data/combat/items.json">api/data/combat/items.json</a></code>
     </div>
-    
+
     <div class="endpoint" style="margin-top: 15px;">
-      <h3>📋 Combat Manifest</h3>
-      <code><a href="api/resource/data/combat/manifest.json">api/resource/data/combat/manifest.json</a></code>
+      <h3>📦 Combat Manifest</h3>
+      <code><a href="api/data/combat/manifest.json">api/data/combat/manifest.json</a></code>
     </div>
   </div>
 
   <div class="section">
-    <h2>🔇 SOS 数据 (Syndrome of Silence)</h2>
+    <h2>🎭 SOS 数据 (Syndrome of Silence)</h2>
     <div class="endpoint">
       <h3>SOS 物品</h3>
-      <code><a href="api/resource/data/sos/items.json">api/resource/data/sos/items.json</a></code>
+      <code><a href="api/data/sos/items.json">api/data/sos/items.json</a></code>
     </div>
-    
+
     <div class="endpoint">
       <h3>SOS 节点</h3>
-      <code><a href="api/resource/data/sos/nodes.json">api/resource/data/sos/nodes.json</a></code>
+      <code><a href="api/data/sos/nodes.json">api/data/sos/nodes.json</a></code>
     </div>
-    
+
     <div class="endpoint" style="margin-top: 15px;">
-      <h3>📋 SOS Manifest</h3>
-      <code><a href="api/resource/data/sos/manifest.json">api/resource/data/sos/manifest.json</a></code>
+      <h3>📦 SOS Manifest</h3>
+      <code><a href="api/data/sos/manifest.json">api/data/sos/manifest.json</a></code>
     </div>
   </div>
 
@@ -93,56 +99,61 @@
       <h3>根 Manifest</h3>
       <code><a href="api/manifest.json">api/manifest.json</a></code>
       <p style="font-size: 14px; color: #666; margin: 5px 0 0 0;">
-        包含 resource/ 子目录的信息
+        包含 data/ 和 resource/ 子目录的信息。
       </p>
     </div>
-    
-    <div class="endpoint">
-      <h3>Resource Manifest</h3>
-      <code><a href="api/resource/manifest.json">api/resource/manifest.json</a></code>
-    </div>
-    
+
     <div class="endpoint">
       <h3>Data Manifest</h3>
+      <code><a href="api/data/manifest.json">api/data/manifest.json</a></code>
+    </div>
+
+    <div class="endpoint">
+      <h3>Resource Manifest (兼容旧版本)</h3>
+      <code><a href="api/resource/manifest.json">api/resource/manifest.json</a></code>
+    </div>
+
+    <div class="endpoint">
+      <h3>旧版 Data Manifest (兼容旧版本)</h3>
       <code><a href="api/resource/data/manifest.json">api/resource/data/manifest.json</a></code>
     </div>
   </div>
-  
+
   <div class="section">
-    <h2>💻 程序化访问示例</h2>
+    <h2>🔧 程序化访问示例</h2>
     <details style="margin: 20px 0; padding: 15px; background: #f9f9f9; border-radius: 4px;">
-      <summary style="cursor: pointer; font-weight: bold;">💡 Python：批量下载所有活动数据</summary>
+      <summary style="cursor: pointer; font-weight: bold;">🐍 Python：批量下载所有活动数据</summary>
       <pre style="margin-top: 10px;"><code>import requests
 
 base_url = 'https://api.1999.fan/api'
 
 # 读取 activity manifest
-manifest = requests.get(f'{base_url}/resource/data/activity/manifest.json').json()
+manifest = requests.get(f'{base_url}/data/activity/manifest.json').json()
 
 # 下载所有文件
 for file in manifest['files']:
     url = f"{base_url}/{file['path']}"
     response = requests.get(url)
-    
+
     # 验证文件完整性
     import hashlib
     downloaded_hash = hashlib.sha256(response.content).hexdigest()
     if downloaded_hash == file['hash']:
         with open(file['name'], 'wb') as f:
             f.write(response.content)
-        print(f"✓ {file['name']} ({file['size']} bytes)")
+        print(f"✅ {file['name']} ({file['size']} bytes)")
     else:
-        print(f"✗ {file['name']} hash mismatch!")
+        print(f"❌ {file['name']} hash mismatch!")
 
 print(f"\nTotal: {len(manifest['files'])} files")</code></pre>
     </details>
 
     <details style="margin: 20px 0; padding: 15px; background: #f9f9f9; border-radius: 4px;">
-      <summary style="cursor: pointer; font-weight: bold;">💡 JavaScript：批量下载所有活动数据</summary>
+      <summary style="cursor: pointer; font-weight: bold;">🟨 JavaScript：批量下载所有活动数据</summary>
       <pre style="margin-top: 10px;"><code>const baseUrl = 'https://api.1999.fan/api';
 
 // 读取 activity manifest
-const manifest = await fetch(`${baseUrl}/resource/data/activity/manifest.json`).then(r => r.json());
+const manifest = await fetch(`${baseUrl}/data/activity/manifest.json`).then(r => r.json());
 
 // 下载所有文件并验证完整性
 for (const file of manifest.files) {
@@ -153,19 +164,19 @@ for (const file of manifest.files) {
         .map(b => b.toString(16).padStart(2, '0'))
         .join('');
     if (hashHex === file.hash) {
-        console.log(`✓ ${file.name} (${file.size} bytes)`);
+        console.log(`✅ ${file.name} (${file.size} bytes)`);
     } else {
-        console.log(`✗ ${file.name} hash mismatch!`);
+        console.log(`❌ ${file.name} hash mismatch!`);
     }
 }
 
 console.log(`Total: ${manifest.files.length} files`);</code></pre>
     </details>
   </div>
-  
+
   <hr style="margin: 40px 0;">
   <p style="color: #999; font-size: 13px; text-align: center;">
-    数据源: <a href="https://github.com/MAA1999/M9A">MAA1999/M9A</a> | 
+    数据源: <a href="https://github.com/MAA1999/M9A">MAA1999/M9A</a> |
     API 仓库: <a href="https://github.com/MAA1999/M9A-API">MAA1999/M9A-API</a>
   </p>
 </body>
