@@ -2,11 +2,10 @@
 """
 Generate manifest.json files for the M9A API directory structure.
 
-This script creates a hierarchical manifest structure:
+This script creates a hierarchical manifest structure, e.g.:
 - api/manifest.json (root)
-- api/resource/manifest.json
-- api/resource/data/manifest.json
-- api/resource/data/activity/manifest.json (files)
+- api/data/manifest.json
+- api/data/activity/manifest.json (files)
 
 Each manifest contains either:
 - "directories": list of subdirectories with their manifest paths
