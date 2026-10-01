@@ -1,0 +1,52 @@
+name: Sync Latest Release from M9A
+
+on:
+  # 支持手动触发
+  workflow_dispatch:
+  # 接收来自 M9A 仓库发版后的触发（M9A 侧需 dispatch 类型 release-published）
+  repository_dispatch:
+    types: [release-published]
+  # 兜底轮询：即使没有收到 dispatch，也能在发版后几小时内更新
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # 必须用 PAT 推送：GITHUB_TOKEN 产生的 push 事件不会创建新的 workflow run，
+          # 换成 PAT 后推送命中 jekyll-gh-pages 的 M9A/** 路径规则即可自动部署
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Generate version manifest
+        run: python tools/generate_version.py
+        env:
+          # 带上 token 走认证请求，避免匿名 60 次/小时的限流
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push if changed
+        run: |
+          git add -A M9A/api/version/
+
+          if git diff --cached --quiet; then
+            echo "版本数据无变化"
+            exit 0
+          fi
+
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "chore: sync latest release [$(date +'%Y-%m-%d')]"
+          git push
+          echo "已更新版本数据；PAT 推送会触发 jekyll-gh-pages 自动部署"

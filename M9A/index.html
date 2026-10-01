@@ -94,12 +94,41 @@
   </div>
 
   <div class="section">
+    <h2>⬇️ 版本信息 (Latest Release)</h2>
+    <p>由 M9A 仓库最新 Release 聚合而来，文档站用它渲染首页的下载入口，避免直连 GitHub API（限流且国内常不可达）。</p>
+
+    <div class="endpoint">
+      <h3>最新稳定版</h3>
+      <code><a href="api/version/stable.json">api/version/stable.json</a></code>
+      <pre style="margin-top: 10px;"><code>{
+  "version": "v4.11.0",
+  "name": "v4.11.0",
+  "published_at": "2026-09-26T07:44:43Z",
+  "html_url": "https://github.com/MAA1999/M9A/releases/tag/v4.11.0",
+  "assets": [
+    {
+      "name": "M9A-win-x86_64-v4.11.0-MFAA.zip",
+      "size": 186730000,
+      "url": "https://github.com/.../M9A-win-x86_64-v4.11.0-MFAA.zip",
+      "mirrors": []
+    }
+  ],
+  "updated": 1790479438698
+}</code></pre>
+      <p style="font-size: 14px; color: #666; margin: 5px 0 0 0;">
+        <code>mirrors</code> 为镜像/加速直链预留（Mirror酱 需要 CDK，无法在此生成直链，目前恒为空数组）。
+        由 <code>tools/generate_version.py</code> 生成，工作流见 <code>.github/workflows/sync-release.yml</code>。
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
     <h2>🗂️ Manifest 层级结构</h2>
     <div class="endpoint">
       <h3>根 Manifest</h3>
       <code><a href="api/manifest.json">api/manifest.json</a></code>
       <p style="font-size: 14px; color: #666; margin: 5px 0 0 0;">
-        包含 data/ 和 resource/ 子目录的信息。
+        包含 data/、resource/ 和 version/ 子目录的信息。
       </p>
     </div>
 
