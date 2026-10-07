@@ -1,93 +1,93 @@
 {
-  "version": "v4.11.1",
-  "name": "v4.11.1",
-  "published_at": "2026-10-01T13:00:00Z",
-  "html_url": "https://github.com/MAA1999/M9A/releases/tag/v4.11.1",
+  "version": "v4.11.2",
+  "name": "v4.11.2",
+  "published_at": "2026-10-07T02:53:10Z",
+  "html_url": "https://github.com/MAA1999/M9A/releases/tag/v4.11.2",
   "assets": [
     {
-      "name": "M9A-linux-aarch64-v4.11.1-MFAA.tar.gz",
-      "size": 207018095,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-linux-aarch64-v4.11.1-MFAA.tar.gz",
+      "name": "M9A-android-arm64-v8a-v4.11.2.apk",
+      "size": 103177538,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-android-arm64-v8a-v4.11.2.apk",
       "mirrors": []
     },
     {
-      "name": "M9A-linux-x86_64-v4.11.1-MFAA.tar.gz",
-      "size": 220280327,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-linux-x86_64-v4.11.1-MFAA.tar.gz",
+      "name": "M9A-android-universal-v4.11.2.apk",
+      "size": 151609042,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-android-universal-v4.11.2.apk",
       "mirrors": []
     },
     {
-      "name": "M9A-linux-x86_64-v4.11.1-MXU.tar.gz",
-      "size": 283945117,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-linux-x86_64-v4.11.1-MXU.tar.gz",
+      "name": "M9A-android-x86_64-v4.11.2.apk",
+      "size": 106565666,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-android-x86_64-v4.11.2.apk",
       "mirrors": []
     },
     {
-      "name": "M9A-macos-aarch64-v4.11.1-MFAA.tar.gz",
-      "size": 194196103,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-macos-aarch64-v4.11.1-MFAA.tar.gz",
+      "name": "M9A-linux-aarch64-v4.11.2-MFAA.tar.gz",
+      "size": 207071589,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-linux-aarch64-v4.11.2-MFAA.tar.gz",
       "mirrors": []
     },
     {
-      "name": "M9A-macos-aarch64-v4.11.1-MXU.tar.gz",
-      "size": 132142376,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-macos-aarch64-v4.11.1-MXU.tar.gz",
+      "name": "M9A-linux-x86_64-v4.11.2-MFAA.tar.gz",
+      "size": 220397006,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-linux-x86_64-v4.11.2-MFAA.tar.gz",
       "mirrors": []
     },
     {
-      "name": "M9A-macos-x86_64-v4.11.1-MFAA.tar.gz",
-      "size": 197538467,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-macos-x86_64-v4.11.1-MFAA.tar.gz",
+      "name": "M9A-linux-x86_64-v4.11.2-MXU.tar.gz",
+      "size": 284057580,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-linux-x86_64-v4.11.2-MXU.tar.gz",
       "mirrors": []
     },
     {
-      "name": "M9A-macos-x86_64-v4.11.1-MXU.tar.gz",
-      "size": 135853004,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-macos-x86_64-v4.11.1-MXU.tar.gz",
+      "name": "M9A-macos-aarch64-v4.11.2-MFAA.tar.gz",
+      "size": 194247752,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-macos-aarch64-v4.11.2-MFAA.tar.gz",
       "mirrors": []
     },
     {
-      "name": "M9A-v4.11.1-arm64-v8a.apk",
-      "size": 102492415,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-v4.11.1-arm64-v8a.apk",
+      "name": "M9A-macos-aarch64-v4.11.2-MXU.tar.gz",
+      "size": 132188247,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-macos-aarch64-v4.11.2-MXU.tar.gz",
       "mirrors": []
     },
     {
-      "name": "M9A-v4.11.1-universal.apk",
-      "size": 150922671,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-v4.11.1-universal.apk",
+      "name": "M9A-macos-x86_64-v4.11.2-MFAA.tar.gz",
+      "size": 197574614,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-macos-x86_64-v4.11.2-MFAA.tar.gz",
       "mirrors": []
     },
     {
-      "name": "M9A-v4.11.1-x86_64.apk",
-      "size": 105880395,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-v4.11.1-x86_64.apk",
+      "name": "M9A-macos-x86_64-v4.11.2-MXU.tar.gz",
+      "size": 135885013,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-macos-x86_64-v4.11.2-MXU.tar.gz",
       "mirrors": []
     },
     {
-      "name": "M9A-win-aarch64-v4.11.1-MFAA.zip",
-      "size": 176858220,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-win-aarch64-v4.11.1-MFAA.zip",
+      "name": "M9A-win-aarch64-v4.11.2-MFAA.zip",
+      "size": 176863777,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-win-aarch64-v4.11.2-MFAA.zip",
       "mirrors": []
     },
     {
-      "name": "M9A-win-aarch64-v4.11.1-MXU.zip",
-      "size": 115503642,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-win-aarch64-v4.11.1-MXU.zip",
+      "name": "M9A-win-aarch64-v4.11.2-MXU.zip",
+      "size": 115509199,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-win-aarch64-v4.11.2-MXU.zip",
       "mirrors": []
     },
     {
-      "name": "M9A-win-x86_64-v4.11.1-MFAA.zip",
-      "size": 186782471,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-win-x86_64-v4.11.1-MFAA.zip",
+      "name": "M9A-win-x86_64-v4.11.2-MFAA.zip",
+      "size": 186787851,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-win-x86_64-v4.11.2-MFAA.zip",
       "mirrors": []
     },
     {
-      "name": "M9A-win-x86_64-v4.11.1-MXU.zip",
-      "size": 125262041,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.1/M9A-win-x86_64-v4.11.1-MXU.zip",
+      "name": "M9A-win-x86_64-v4.11.2-MXU.zip",
+      "size": 125267421,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.11.2/M9A-win-x86_64-v4.11.2-MXU.zip",
       "mirrors": []
     }
   ],
-  "updated": 1790860651649
+  "updated": 1791352924629
 }
