@@ -1,93 +1,93 @@
 {
-  "version": "v4.13.1",
-  "name": "v4.13.1",
-  "published_at": "2026-10-29T14:49:07Z",
-  "html_url": "https://github.com/MAA1999/M9A/releases/tag/v4.13.1",
+  "version": "v4.14.0",
+  "name": "v4.14.0",
+  "published_at": "2026-11-08T12:22:16Z",
+  "html_url": "https://github.com/MAA1999/M9A/releases/tag/v4.14.0",
   "assets": [
     {
-      "name": "M9A-android-arm64-v8a-v4.13.1.apk",
-      "size": 104941560,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-android-arm64-v8a-v4.13.1.apk",
+      "name": "M9A-android-arm64-v8a-v4.14.0.apk",
+      "size": 104844004,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-android-arm64-v8a-v4.14.0.apk",
       "mirrors": []
     },
     {
-      "name": "M9A-android-universal-v4.13.1.apk",
-      "size": 153445379,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-android-universal-v4.13.1.apk",
+      "name": "M9A-android-universal-v4.14.0.apk",
+      "size": 153356075,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-android-universal-v4.14.0.apk",
       "mirrors": []
     },
     {
-      "name": "M9A-android-x86_64-v4.13.1.apk",
-      "size": 111057437,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-android-x86_64-v4.13.1.apk",
+      "name": "M9A-android-x86_64-v4.14.0.apk",
+      "size": 110960701,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-android-x86_64-v4.14.0.apk",
       "mirrors": []
     },
     {
-      "name": "M9A-linux-aarch64-v4.13.1-MFAA.tar.gz",
-      "size": 210982389,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-linux-aarch64-v4.13.1-MFAA.tar.gz",
+      "name": "M9A-linux-aarch64-v4.14.0-MFAA.tar.gz",
+      "size": 210840105,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-linux-aarch64-v4.14.0-MFAA.tar.gz",
       "mirrors": []
     },
     {
-      "name": "M9A-linux-x86_64-v4.13.1-MFAA.tar.gz",
-      "size": 225013853,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-linux-x86_64-v4.13.1-MFAA.tar.gz",
+      "name": "M9A-linux-x86_64-v4.14.0-MFAA.tar.gz",
+      "size": 224847586,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-linux-x86_64-v4.14.0-MFAA.tar.gz",
       "mirrors": []
     },
     {
-      "name": "M9A-linux-x86_64-v4.13.1-MXU.tar.gz",
-      "size": 289999775,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-linux-x86_64-v4.13.1-MXU.tar.gz",
+      "name": "M9A-linux-x86_64-v4.14.0-MXU.tar.gz",
+      "size": 292513065,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-linux-x86_64-v4.14.0-MXU.tar.gz",
       "mirrors": []
     },
     {
-      "name": "M9A-macos-aarch64-v4.13.1-MFAA.tar.gz",
-      "size": 195605683,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-macos-aarch64-v4.13.1-MFAA.tar.gz",
+      "name": "M9A-macos-aarch64-v4.14.0-MFAA.tar.gz",
+      "size": 195510773,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-macos-aarch64-v4.14.0-MFAA.tar.gz",
       "mirrors": []
     },
     {
-      "name": "M9A-macos-aarch64-v4.13.1-MXU.tar.gz",
-      "size": 133524757,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-macos-aarch64-v4.13.1-MXU.tar.gz",
+      "name": "M9A-macos-aarch64-v4.14.0-MXU.dmg",
+      "size": 179809011,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-macos-aarch64-v4.14.0-MXU.dmg",
       "mirrors": []
     },
     {
-      "name": "M9A-macos-x86_64-v4.13.1-MFAA.tar.gz",
-      "size": 199677780,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-macos-x86_64-v4.13.1-MFAA.tar.gz",
+      "name": "M9A-macos-x86_64-v4.14.0-MFAA.tar.gz",
+      "size": 199594648,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-macos-x86_64-v4.14.0-MFAA.tar.gz",
       "mirrors": []
     },
     {
-      "name": "M9A-macos-x86_64-v4.13.1-MXU.tar.gz",
-      "size": 137944179,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-macos-x86_64-v4.13.1-MXU.tar.gz",
+      "name": "M9A-macos-x86_64-v4.14.0-MXU.dmg",
+      "size": 175583365,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-macos-x86_64-v4.14.0-MXU.dmg",
       "mirrors": []
     },
     {
-      "name": "M9A-win-aarch64-v4.13.1-MFAA.zip",
-      "size": 188573304,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-win-aarch64-v4.13.1-MFAA.zip",
+      "name": "M9A-win-aarch64-v4.14.0-MFAA.zip",
+      "size": 188412052,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-win-aarch64-v4.14.0-MFAA.zip",
       "mirrors": []
     },
     {
-      "name": "M9A-win-aarch64-v4.13.1-MXU.zip",
-      "size": 127185063,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-win-aarch64-v4.13.1-MXU.zip",
+      "name": "M9A-win-aarch64-v4.14.0-MXU.zip",
+      "size": 127857880,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-win-aarch64-v4.14.0-MXU.zip",
       "mirrors": []
     },
     {
-      "name": "M9A-win-x86_64-v4.13.1-MFAA.zip",
-      "size": 197090165,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-win-x86_64-v4.13.1-MFAA.zip",
+      "name": "M9A-win-x86_64-v4.14.0-MFAA.zip",
+      "size": 196944356,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-win-x86_64-v4.14.0-MFAA.zip",
       "mirrors": []
     },
     {
-      "name": "M9A-win-x86_64-v4.13.1-MXU.zip",
-      "size": 135551320,
-      "url": "https://github.com/MAA1999/M9A/releases/download/v4.13.1/M9A-win-x86_64-v4.13.1-MXU.zip",
+      "name": "M9A-win-x86_64-v4.14.0-MXU.zip",
+      "size": 136248999,
+      "url": "https://github.com/MAA1999/M9A/releases/download/v4.14.0/M9A-win-x86_64-v4.14.0-MXU.zip",
       "mirrors": []
     }
   ],
-  "updated": 1793313935115
+  "updated": 1794144411306
 }
